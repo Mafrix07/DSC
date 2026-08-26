@@ -150,13 +150,23 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = isOpen ? 'hidden' : '';
         });
 
-        navLinks.forEach(link => {
+        const allNavLinks = navMenu.querySelectorAll('a');
+        allNavLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
                 mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
                 mobileMenuBtn.setAttribute('aria-expanded', 'false');
                 document.body.style.overflow = '';
             });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
         });
 
         document.addEventListener('keydown', (e) => {
@@ -799,43 +809,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (type === 'warning') iconHtml = '<i class="fas fa-triangle-exclamation"></i>';
 
             toast.innerHTML = `${iconHtml}<span>${message}</span>`;
-
-            toast.style.cssText = `
-                position: fixed;
-                top: 85px;
-                right: 22px;
-                background-color: ${type === 'success' ? '#059669' : type === 'warning' ? '#D97706' : '#070D1E'};
-                color: #FFFFFF;
-                padding: 13px 20px;
-                border-radius: 10px;
-                border: 1px solid rgba(255, 255, 255, 0.15);
-                box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                font-family: var(--font-body);
-                font-size: 0.9rem;
-                font-weight: 600;
-                z-index: 10000;
-                max-width: 380px;
-                animation: toastIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            `;
-
             document.body.appendChild(toast);
 
             setTimeout(() => {
-                toast.style.animation = 'toastOut 0.3s cubic-bezier(0.16, 1, 0.3, 1)';
-                setTimeout(() => toast.remove(), 300);
-            }, 4200);
+                toast.classList.add('toast-fadeout');
+                setTimeout(() => toast.remove(), 350);
+            }, 4000);
         }
     };
-
-    const toastAnimationStyles = document.createElement('style');
-    toastAnimationStyles.textContent = `
-        @keyframes toastIn { from { transform: translateX(120%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
-        @keyframes toastOut { from { transform: translateX(0); opacity: 1; } to { transform: translateX(120%); opacity: 0; } }
-    `;
-    document.head.appendChild(toastAnimationStyles);
 
     // ==========================================================================
     // 12. GESTION DU CONSENTEMENT COOKIES
