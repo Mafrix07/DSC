@@ -1,34 +1,72 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datasecur Consulting - Votre conformité, notre engagement</title>
+    <title>Datasecur Consulting | Cabinet d'Expertise en Protection des Données & Cybersécurité à Lomé</title>
     
-    <!-- Meta SEO -->
-    <meta name="description" content="Datasecur Consulting accompagne les entreprises et institutions dans la mise en conformité et la sécurisation durable de leurs activités numériques. Expert RGPD et protection des données.">
-    <meta name="keywords" content="protection des données, RGPD, cybersécurité, audit conformité, Datasecur, conseil numérique">
+    <!-- Meta SEO & Référencement -->
+    <meta name="description" content="Datasecur Consulting est un cabinet d'experts juristes et auditeurs en cybersécurité à Lomé. Mise en conformité Loi APDP Togo n° 2019-014, RGPD, DPO externalisé et sécurisation des SI.">
+    <meta name="keywords" content="Datasecur Consulting, conformité APDP Togo, protection données personnelles Lomé, DPO externe Togo, Loi 2019-014 Togo, cybersécurité entreprise Lomé, audit RGPD Afrique de l'Ouest, sécurité des systèmes d'information">
     <meta name="author" content="Datasecur Consulting">
+    <meta name="robots" content="index, follow">
     
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Réseaux Sociaux -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://datasecur-consulting.tg/">
-    <meta property="og:title" content="Datasecur Consulting - Votre conformité, notre engagement">
-    <meta property="og:description" content="Expert en mise en conformité et protection des données personnelles. Sécurisez vos activités numériques dès aujourd'hui.">
+    <meta property="og:title" content="Datasecur Consulting | Votre conformité, notre engagement">
+    <meta property="og:description" content="Cabinet de conseil à Lomé alliant rigueur juridique (Loi APDP, RGPD) et expertise technique en cybersécurité pour les entreprises d'Afrique de l'Ouest.">
     <meta property="og:image" content="logo.jpg">
 
-    <!-- Twitter -->
+    <!-- Twitter Card -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://datasecur-consulting.tg/">
-    <meta property="twitter:title" content="Datasecur Consulting - Votre conformité, notre engagement">
-    <meta property="twitter:description" content="Expert en mise en conformité et protection des données personnelles. Sécurisez vos activités numériques dès aujourd'hui.">
+    <meta property="twitter:title" content="Datasecur Consulting | Droit des Données & Cybersécurité">
+    <meta property="twitter:description" content="Cabinet de conseil juridique et technique en protection des données et sécurité des SI à Lomé.">
     <meta property="twitter:image" content="logo.jpg">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Données structurées Schema.org (LegalService) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "Datasecur Consulting",
+      "image": "https://datasecur-consulting.tg/logo.jpg",
+      "description": "Cabinet de conseil juridique et technique spécialisé en conformité des données personnelles (Loi APDP n° 2019-014, RGPD) et sécurité des systèmes d'information.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rue du Commerce, Immeuble Datasecur",
+        "addressLocality": "Lomé",
+        "addressCountry": "TG"
+      },
+      "telephone": "+22822212019",
+      "email": "contact@datasecur-consulting.tg",
+      "url": "https://datasecur-consulting.tg/",
+      "openingHours": "Mo-Fr 08:00-18:00, Sa 09:00-13:00",
+      "priceRange": "$$"
+    }
+    </script>
+
+    <!-- Google Fonts & Font Awesome Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Script d'initialisation immédiate du thème pour éviter tout clignotement -->
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('datasecur_theme_pref');
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const theme = savedTheme ? savedTheme : (prefersDark ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+                if (theme === 'dark') document.documentElement.classList.add('dark-theme');
+            } catch(e) {}
+        })();
+    </script>
+    
+    <!-- Feuille de style principale avec versioning anti-cache -->
+    <link rel="stylesheet" href="css/style.css?v=2.4">
 </head>
 <body>
     <!-- Page Transition Loader -->
@@ -37,76 +75,76 @@
         <div class="loader-motto">Votre conformité, notre engagement</div>
     </div>
 
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-container" aria-hidden="true">
+        <div class="scroll-progress-bar" id="progressBar"></div>
+    </div>
+
     <!-- Cookie Consent Banner -->
-    <div class="cookie-consent" id="cookieConsent">
+    <div class="cookie-consent" id="cookieConsent" role="region" aria-label="Gestion des cookies">
         <div class="cookie-content">
             <div class="cookie-text">
-                <p>Nous utilisons des cookies pour le fonctionnement du site et, avec votre accord, pour analyser son utilisation. Vous pouvez tout accepter, refuser, ou gérer vos préférences.</p>
-                <a href="#" id="showCookiePolicy">En savoir plus</a>
+                <p><i class="fas fa-shield-halved cookie-icon-banner"></i> Conformément aux exigences de transparence et de protection de la vie privée, nous utilisons des cookies strictement techniques et, avec votre accord, des mesures d'audience anonymes.</p>
+                <a href="#" id="showCookiePolicy" class="cookie-link">Consulter notre politique de gestion des cookies</a>
             </div>
             <div class="cookie-buttons">
                 <button class="cookie-btn cookie-btn-refuse" id="refuseNonEssential">Refuser</button>
-                <button class="cookie-btn cookie-btn-accept" id="acceptAllCookies">Tout accepter</button>
                 <button class="cookie-btn cookie-btn-settings" id="cookieSettings">Personnaliser</button>
+                <button class="cookie-btn cookie-btn-accept" id="acceptAllCookies">Tout accepter</button>
             </div>
         </div>
     </div>
 
     <!-- Cookie Settings Modal -->
-    <div class="cookie-modal" id="cookieModal">
+    <div class="cookie-modal" id="cookieModal" role="dialog" aria-modal="true" aria-labelledby="cookieModalTitle">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Préférences des cookies</h3>
-                <button class="modal-close" id="closeCookieModal">&times;</button>
+                <h3 id="cookieModalTitle"><i class="fas fa-user-shield"></i> Gestion de vos préférences de confidentialité</h3>
+                <button class="modal-close" id="closeCookieModal" aria-label="Fermer la fenêtre">&times;</button>
             </div>
             <div class="modal-body">
-                <p>En tant que cabinet spécialisé en protection des données, nous nous engageons à respecter votre vie privée. Vous pouvez configurer vos préférences de cookies ci-dessous.</p>
+                <p>En tant que cabinet spécialisé en protection des données, nous respectons scrupuleusement vos choix. Aucun traceur publicitaire n'est utilisé sur notre plateforme.</p>
                 
                 <div class="cookie-category">
                     <div class="category-header">
-                        <h4>Cookies essentiels</h4>
+                        <div>
+                            <h4>Cookies techniques indispensables</h4>
+                            <span class="cookie-tag required">Obligatoire</span>
+                        </div>
                         <label class="toggle-switch">
                             <input type="checkbox" id="essentialCookies" checked disabled>
                             <span class="toggle-slider"></span>
                         </label>
                     </div>
-                    <p class="category-description">Ces cookies sont nécessaires au fonctionnement du site et ne peuvent pas être désactivés.</p>
+                    <p class="category-description">Nécessaires au fonctionnement technique sécurisé du site et à la mémorisation de vos consentements.</p>
                 </div>
                 
                 <div class="cookie-category">
                     <div class="category-header">
-                        <h4>Cookies analytiques</h4>
+                        <div>
+                            <h4>Mesures d'audience anonymes</h4>
+                            <span class="cookie-tag optional">Optionnel</span>
+                        </div>
                         <label class="toggle-switch">
                             <input type="checkbox" id="analyticsCookies">
                             <span class="toggle-slider"></span>
                         </label>
                     </div>
-                    <p class="category-description">Ces cookies nous permettent de comprendre comment les visiteurs interagissent avec notre site. Ils nous aident à améliorer l'expérience utilisateur en collectant des informations anonymes.</p>
-                    <div class="cookie-list">
-                        <strong>Cookies utilisés :</strong>
-                        <ul>
-                            <li><strong>_ga</strong> : Google Analytics - Suivi des utilisateurs (durée : 2 ans)</li>
-                            <li><strong>_gid</strong> : Google Analytics - Identification de session (durée : 24h)</li>
-                        </ul>
-                    </div>
+                    <p class="category-description">Statistiques de fréquentation anonymisées pour nous aider à mesurer l'utilité de nos guides et fiches pratiques.</p>
                 </div>
                 
                 <div class="cookie-category">
                     <div class="category-header">
-                        <h4>Cookies de préférences</h4>
+                        <div>
+                            <h4>Préférence d'affichage du thème</h4>
+                            <span class="cookie-tag optional">Optionnel</span>
+                        </div>
                         <label class="toggle-switch">
                             <input type="checkbox" id="preferenceCookies">
                             <span class="toggle-slider"></span>
                         </label>
                     </div>
-                    <p class="category-description">Ces cookies permettent au site de se souvenir des choix que vous faites (comme votre langue) et de fournir des fonctionnalités améliorées.</p>
-                    <div class="cookie-list">
-                        <strong>Cookies utilisés :</strong>
-                        <ul>
-                            <li><strong>language</strong> : Stocke votre préférence linguistique (durée : 1 an)</li>
-                            <li><strong>consent</strong> : Stocke vos préférences de cookies (durée : 1 an)</li>
-                        </ul>
-                    </div>
+                    <p class="category-description">Conserve votre choix de mode d'affichage (Thème Clair ou Thème Sombre) pour vos prochaines visites.</p>
                 </div>
             </div>
             <div class="modal-footer">
@@ -116,632 +154,1379 @@
         </div>
     </div>
 
-    <!-- Main Page -->
+    <!-- Service Detail Modal -->
+    <div class="modal-overlay" id="serviceModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div class="modal-service-title-wrap">
+                    <div class="modal-service-icon" id="modalServiceIcon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 id="modalServiceTitle">Fiche de Prestation</h3>
+                </div>
+                <button class="modal-close" id="closeServiceModal" aria-label="Fermer la fiche">&times;</button>
+            </div>
+            <div class="modal-body" id="modalServiceBody">
+                <!-- Rempli dynamiquement par JS -->
+            </div>
+            <div class="modal-footer">
+                <a href="#contact" class="btn btn-primary" id="modalServiceCta">Demander une proposition pour cette mission <i class="fas fa-arrow-right"></i></a>
+                <button class="btn btn-secondary" id="modalCloseBtn">Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Web Page -->
     <div id="mainPage">
         <!-- Header & Navigation -->
         <header id="header">
             <div class="container header-container">
-                <div class="logo">
-                    <img src="data-secur/logo-datasecur-blanc.png" alt="Datasecur Consulting Logo" class="header-logo-img">
+                <a href="#home" class="logo" aria-label="Datasecur Consulting - Accueil">
+                    <img src="data-secur/logo-datasecur-bleu.png" alt="Datasecur Consulting Logo" class="header-logo-img logo-light-mode-img">
+                    <img src="data-secur/logo-datasecur-blanc.png" alt="Datasecur Consulting Logo" class="header-logo-img logo-dark-mode-img">
                     <div class="motto">Votre conformité, notre engagement</div>
-                </div>
+                </a>
                 
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-                
-                <nav>
+                <nav aria-label="Navigation principale">
                     <ul id="navMenu">
-                        <li><a href="#home">Accueil</a></li>
-                        <li><a href="#about">À propos</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <!-- <li><a href="#team">Équipe</a></li> -->
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home" class="nav-link active">Accueil</a></li>
+                        <li><a href="#about" class="nav-link">Le Cabinet</a></li>
+                        <li><a href="#services" class="nav-link">Nos Expertises</a></li>
+                        <li><a href="#simulator" class="nav-link nav-highlight"><i class="fas fa-clipboard-check"></i> Auto-Évaluation</a></li>
+                        <li><a href="#contact" class="nav-link">Contact & Devis</a></li>
                     </ul>
                 </nav>
+
+                <div class="header-actions">
+                    <!-- Bascule Thème Sombre / Clair -->
+                    <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Basculer le mode d'affichage sombre ou clair" title="Changer de thème">
+                        <i class="fas fa-moon moon-icon"></i>
+                        <i class="fas fa-sun sun-icon"></i>
+                    </button>
+
+                    <!-- CTA rapide Header -->
+                    <a href="#contact" class="btn btn-sm btn-header-cta d-none-mobile">
+                        <span>Échanger avec nous</span>
+                    </a>
+
+                    <!-- Bouton menu mobile -->
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </div>
         </header>
 
-        <!-- Hero Section -->
-        <section class="hero" id="home">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-logo">
-                        <img src="logo.jpg" alt="Datasecur Consulting Logo">
-                    </div>
-                    <h1>Protection des Données & Sécurité Numérique</h1>
-                    <p>Datasecur Consulting accompagne les entreprises et institutions dans la mise en conformité et la sécurisation durable de leurs activités numériques.</p>
-                    <div class="hero-btns">
-                        <a href="#services" class="btn btn-primary">Découvrir nos services</a>
-                        <a href="#contact" class="btn btn-white">Demander un audit</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Stats Section -->
-        <section class="stats-section" id="stats">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item animate-on-scroll">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-text">Clients accompagnés avec succès</div>
-                    </div>
-                    <div class="stat-item animate-on-scroll">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-text">Conformité protection des données garantie</div>
-                    </div>
-                    <div class="stat-item animate-on-scroll">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-text">Support technique disponible</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="about" id="about">
-            <div class="container">
-                <div class="section-header">
-                    <h2>À Propos de <span>Datasecur Consulting</span></h2>
-                    <p class="section-subtitle">Expert en mise en conformité et protection des données personnelles.</p>
-                </div>
+        <main>
+            <!-- Hero Section : La Thèse du Double Sceau (Droit + SI) -->
+            <section class="hero" id="home">
+                <div class="hero-bg-grid" aria-hidden="true"></div>
                 
-                <div class="about-content">
-                    <div class="about-image animate-on-scroll">
-                        <img src="photo2.jpg" alt="Équipe Datasecur Consulting">
+                <div class="container">
+                    <div class="hero-layout">
+                        <!-- Colonne Gauche : Thèse & Accroche -->
+                        <div class="hero-text-col">
+                            <div class="hero-badge animate-on-scroll">
+                                <span class="badge-dot"></span> Cabinet de Conseil Spécialisé Droit & SI • Lomé, Togo
+                            </div>
+                            
+                            <h1 class="animate-on-scroll">
+                                Mettez votre entreprise en conformité <span class="hero-highlight">APDP & RGPD</span> sans freiner votre croissance.
+                            </h1>
+                            
+                            <!-- Mobile Compact Proof Card : Apparaît ici uniquement sur petits écrans -->
+                            <div class="hero-dossier-card mobile-only-proof animate-on-scroll">
+                                <div class="dossier-header">
+                                    <div class="dossier-tag"><span class="code-mono">DOSSIER #TG-CONFORMITE</span></div>
+                                    <span class="dossier-status-pill"><i class="fas fa-circle-check"></i> Statut : Sécurisé</span>
+                                </div>
+                                <div class="dossier-items-compact">
+                                    <div class="dossier-check-row"><i class="fas fa-scale-balanced icon-legal"></i> Registre APDP (Loi 2019-014) : <strong>Conforme</strong></div>
+                                    <div class="dossier-check-row"><i class="fas fa-lock icon-tech"></i> Sauvegardes & SI : <strong>Chiffrées</strong></div>
+                                </div>
+                            </div>
+
+                            <p class="hero-lead animate-on-scroll">
+                                <strong>Datasecur Consulting</strong> allie juristes experts et auditeurs en sécurité informatique. Nous accompagnons les entreprises, institutions, banques et cliniques d'Afrique de l'Ouest pour structurer leur conformité (Loi APDP, RGPD) et sécuriser sereinement leurs systèmes d'information.
+                            </p>
+                            
+                            <div class="hero-btns animate-on-scroll">
+                                <a href="#simulator" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-list-check"></i> Évaluer votre niveau de conformité
+                                </a>
+                                <a href="#contact" class="btn btn-outline-hero btn-lg">
+                                    <i class="fas fa-phone"></i> Prendre rendez-vous
+                                </a>
+                            </div>
+
+                            <!-- Trust Badges Strip -->
+                            <div class="hero-trust-bar animate-on-scroll">
+                                <div class="trust-pill">
+                                    <i class="fas fa-scale-balanced icon-legal"></i> Conforme Loi n° 2019-014 (Togo) & RGPD
+                                </div>
+                                <div class="trust-pill">
+                                    <i class="fas fa-shield-halved icon-tech"></i> DPO Certifiés & Auditeurs SI
+                                </div>
+                                <div class="trust-pill">
+                                    <i class="fas fa-bolt icon-alert"></i> Assistance Urgence Incident 24/7
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Colonne Droite : Le Dossier de Conformité Vivant (Desktop) -->
+                        <div class="hero-visual-col desktop-only-proof animate-on-scroll">
+                            <div class="hero-dossier-card">
+                                <div class="dossier-header">
+                                    <div class="dossier-title-wrap">
+                                        <i class="fas fa-folder-closed dossier-icon"></i>
+                                        <div>
+                                            <span class="dossier-label code-mono">RÉF. DOSSIER #TG-CONFORMITE</span>
+                                            <h4>Dossier de Conformité Entreprise</h4>
+                                        </div>
+                                    </div>
+                                    <span class="dossier-status-pill"><i class="fas fa-circle-check"></i> 100% Validé</span>
+                                </div>
+
+                                <div class="dossier-checklist">
+                                    <div class="dossier-item completed">
+                                        <div class="dossier-item-icon"><i class="fas fa-scale-balanced icon-legal"></i></div>
+                                        <div class="dossier-item-info">
+                                            <strong>Registre des Traitements (Loi n° 2019-014)</strong>
+                                            <span>Cartographie des flux RH, clients et paie</span>
+                                        </div>
+                                        <span class="dossier-badge-success"><i class="fas fa-check"></i> Conforme</span>
+                                    </div>
+
+                                    <div class="dossier-item completed">
+                                        <div class="dossier-item-icon"><i class="fas fa-user-shield icon-legal"></i></div>
+                                        <div class="dossier-item-info">
+                                            <strong>Délégué à la Protection des Données (DPO)</strong>
+                                            <span>DPO externe déclaré auprès de l'APDP</span>
+                                        </div>
+                                        <span class="dossier-badge-success"><i class="fas fa-check"></i> Actif</span>
+                                    </div>
+
+                                    <div class="dossier-item completed">
+                                        <div class="dossier-item-icon"><i class="fas fa-lock icon-tech"></i></div>
+                                        <div class="dossier-item-info">
+                                            <strong>Sécurité des Sauvegardes & Réseaux</strong>
+                                            <span>Chiffrement 256-bit, double authentification (2FA)</span>
+                                        </div>
+                                        <span class="dossier-badge-success"><i class="fas fa-check"></i> Verrouillé</span>
+                                    </div>
+
+                                    <div class="dossier-item completed">
+                                        <div class="dossier-item-icon"><i class="fas fa-users-gear icon-tech"></i></div>
+                                        <div class="dossier-item-info">
+                                            <strong>Sensibilisation du Personnel</strong>
+                                            <span>Équipes formées aux réflexes anti-phishing</span>
+                                        </div>
+                                        <span class="dossier-badge-success"><i class="fas fa-check"></i> Certifié</span>
+                                    </div>
+                                </div>
+
+                                <div class="dossier-footer">
+                                    <span class="code-mono seal-text"><i class="fas fa-award"></i> GARANTIE DATASECUR CONSULTING LOMÉ</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="about-text animate-on-scroll">
-                        <h2>Notre Mission : Votre Conformité</h2>
-                        <p>Fondé par des experts en protection des données, Datasecur Consulting est un cabinet spécialisé dans l'accompagnement des entreprises vers la conformité et la protection des données personnelles et la sécurisation de leurs systèmes d'information. Notre équipe d'experts certifiés vous guide à chaque étape.</p>
-                        <p>Notre devise, <strong>"Votre conformité, notre engagement"</strong>, traduit notre philosophie : nous nous engageons pleinement pour accompagner nos clients vers une conformité durable et une sécurité renforcée de leurs données sensibles.</p>
+                </div>
+            </section>
+
+            <!-- Stats Section : Indicateurs Réels du Terrain -->
+            <section class="stats-section" id="stats">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-item animate-on-scroll">
+                            <div class="stat-number code-mono" data-target="60">0</div>
+                            <span class="stat-plus">+</span>
+                            <div class="stat-title">Structures Auditées</div>
+                            <div class="stat-text">Entreprises, cliniques et fintechs accompagnées au Togo et en Afrique de l'Ouest.</div>
+                        </div>
                         
-                        <div class="about-features">
-                            <div class="feature">
-                                <i class="fas fa-shield-alt"></i>
-                                <h3>Expertise Certifiée</h3>
-                                <p>Une équipe d'experts certifiés en cybersécurité et protection des données.</p>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-handshake"></i>
-                                <h3>Accompagnement Sur-Mesure</h3>
-                                <p>Un suivi personnalisé tout au long de votre processus de conformité.</p>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-globe"></i>
-                                <h3>Vision Internationale</h3>
-                                <p>Une approche globale adaptée aux enjeux locaux et internationaux.</p>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-certificate"></i>
-                                <h3>Conformité Durable</h3>
-                                <p>Des solutions qui évoluent avec votre entreprise et la réglementation.</p>
-                            </div>
+                        <div class="stat-item animate-on-scroll">
+                            <div class="stat-number code-mono" data-target="100">0</div>
+                            <span class="stat-plus">%</span>
+                            <div class="stat-title">Dossiers APDP Validés</div>
+                            <div class="stat-text">Zéro rejet lors des dépôts et déclarations de registres réglementaires.</div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Services Section -->
-        <section class="services" id="services">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Nos <span>Services Experts</span></h2>
-                    <p class="section-subtitle">Une gamme complète de services pour garantir votre conformité et la protection de vos données personnelles.</p>
-                </div>
-                
-                <div class="services-grid">
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">
-                            <i class="fas fa-file-contract"></i>
+                        <div class="stat-item animate-on-scroll">
+                            <div class="stat-number code-mono" data-target="1200">0</div>
+                            <span class="stat-plus">+</span>
+                            <div class="stat-title">Salariés Sensibilisés</div>
+                            <div class="stat-text">Managers et collaborateurs formés aux réflexes pratiques anti-fuite de données.</div>
                         </div>
-                        <h3>Audit de Conformité</h3>
-                        <p>Évaluation complète de votre niveau de conformité aux réglementations sur la protection des données personnelles.</p>
-                        <a href="#contact" class="service-link">Demander un audit <i class="fas fa-arrow-right"></i></a>
-                    </div> 
-                    
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">
-                            <i class="fas fa-user-shield"></i>
-                        </div>
-                        <h3>Protection des Données Personnelles</h3>
-                        <p>Mise en place de politiques et procédures pour garantir la protection des données personnelles dans votre organisation.</p>
-                        <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <h3>Sécurisation des Systèmes</h3>
-                        <p>Renforcement de la sécurité de vos infrastructures informatiques contre les cybermenaces et les violations de données.</p>
-                        <a href="#contact" class="service-link">Protéger mes systèmes <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                        </div>
-                        <h3>Formation & Sensibilisation</h3>
-                        <p>Programmes de formation adaptés pour vos équipes sur la protection des données et la cybersécurité.</p>
-                        <a href="#contact" class="service-link">Voir les formations <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">
-                            <i class="fas fa-clipboard-check"></i>
-                        </div>
-                        <h3>Accompagnement à la Certification</h3>
-                        <p>Support pour l'obtention de certifications en sécurité et protection des données reconnues internationalement.</p>
-                        <a href="#contact" class="service-link">Obtenir une certification <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h3>Support Continu & Veille</h3>
-                        <p>Un accompagnement permanent pour maintenir votre conformité face à l'évolution des réglementations.</p>
-                        <a href="#contact" class="service-link">Découvrir notre support <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="faq" id="faq">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Foire Aux <span>Questions</span></h2>
-                    <p class="section-subtitle">Retrouvez les réponses aux questions les plus fréquemment posées sur la protection des données et nos services.</p>
-                </div>
-                
-                <div class="faq-container">
-                    <div class="faq-item animate-on-scroll">
-                        <div class="faq-question">
-                            <h3>Qu'est-ce que le RGPD et mon entreprise est-elle concernée ?</h3>
-                            <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Le Règlement Général sur la Protection des Données (RGPD) est un cadre juridique européen qui définit les règles de collecte et de traitement des données personnelles. Toute entreprise, quelle que soit sa taille, qui manipule des données de citoyens européens est concernée.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item animate-on-scroll">
-                        <div class="faq-question">
-                            <h3>Combien de temps dure un audit de conformité ?</h3>
-                            <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>La durée d'un audit dépend de la complexité de votre organisation et du volume de données traitées. En général, un audit complet prend entre 2 à 4 semaines, incluant l'analyse des processus et la remise du rapport de recommandations.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item animate-on-scroll">
-                        <div class="faq-question">
-                            <h3>Pourquoi faire appel à un cabinet externe plutôt que de gérer en interne ?</h3>
-                            <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Un cabinet externe comme Datasecur Consulting apporte une expertise neutre, certifiée et toujours à jour des dernières réglementations. Cela vous permet de gagner du temps, d'éviter les erreurs juridiques coûteuses et de vous concentrer sur votre cœur de métier.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item animate-on-scroll">
-                        <div class="faq-question">
-                            <h3>Quelles sont les sanctions en cas de non-conformité ?</h3>
-                            <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Les sanctions peuvent être administratives (mises en demeure publiques) ou financières, pouvant atteindre jusqu'à 20 millions d'euros ou 4% du chiffre d'affaires annuel mondial pour les manquements les plus graves.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact" id="contact">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Contactez-<span>Nous</span></h2>
-                    <p class="section-subtitle">Prenez contact avec notre équipe d'experts pour évaluer vos besoins en conformité et sécurité numérique.</p>
-                </div>
-                
-                <div class="contact-content">
-                    <div class="contact-info animate-on-scroll">
-                        <h3>Parlons de votre projet</h3>
-                        <p>Notre équipe est à votre disposition pour répondre à vos questions et vous accompagner dans votre démarche de conformité.</p>
                         
-                        <div class="contact-details">
-                            <div class="contact-detail">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <h4>Adresse</h4>
-                                    <p>Rue du Commerce, Immeuble Datasecur</p>
-                                </div>
+                        <div class="stat-item animate-on-scroll">
+                            <div class="stat-number code-mono" data-target="24">0</div>
+                            <span class="stat-plus">/7</span>
+                            <div class="stat-title">Hotline Réactive</div>
+                            <div class="stat-text">Intervention sous 2h en cas de cyberattaque ou de suspicion de fuite.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Preuve d'Autorité : Leadership Institutionnel, FIPDCP & APDP Togo -->
+            <section class="authority-section" id="authority">
+                <div class="container">
+                    <div class="authority-grid">
+                        <div class="authority-text-block animate-on-scroll">
+                            <div class="badge-subtitle"><i class="fas fa-landmark"></i> Leadership & Événements</div>
+                            <h2>Au Cœur de la Gouvernance des Données en <span>Afrique de l'Ouest</span></h2>
+                            <p>Datasecur Consulting ne se contente pas d'appliquer la conformité : nous participons activement à la structuration du cadre juridique et technique en partenariat avec les institutions de régulation et les acteurs majeurs du continent.</p>
+                            <ul class="authority-highlights-list">
+                                <li><i class="fas fa-circle-check icon-success"></i> <strong>Partenaire et acteur clé du FIPDCP</strong> (Forum International sur la Protection des Données à Caractère Personnel).</li>
+                                <li><i class="fas fa-circle-check icon-success"></i> <strong>Synergie continue avec l'APDP Togo</strong> pour l'application stricte et pragmatique de la Loi n° 2019-014.</li>
+                                <li><i class="fas fa-circle-check icon-success"></i> <strong>Vulgarisation & Webinaires</strong> réguliers auprès des dirigeants, directions juridiques et DSI de la zone CEDEAO.</li>
+                            </ul>
+                            <div class="authority-action">
+                                <a href="#contact" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Inviter nos experts à votre conférence</a>
                             </div>
-                            
-                            <div class="contact-detail">
-                                <i class="fas fa-phone"></i>
-                                <div>
-                                    <h4>Téléphone</h4>
-                                    <p>+228 22 21 20 19</p>
-                                </div>
+                        </div>
+                        <div class="authority-gallery-grid animate-on-scroll">
+                            <div class="gallery-item gallery-span-2">
+                                <img src="photo2.jpg" alt="Panel d'experts Datasecur et APDP Togo en conférence" loading="lazy">
+                                <span class="gallery-tag-overlay"><i class="fas fa-users-viewfinder"></i> Panel d'Experts APDP Togo & FIPDCP</span>
                             </div>
-                            
-                            <div class="contact-detail">
-                                <i class="fas fa-envelope"></i>
-                                <div>
-                                    <h4>Email</h4>
-                                    <p>contact@datasecur-consulting.tg</p>
-                                </div>
+                            <div class="gallery-item">
+                                <img src="photo.jpg" alt="Intervention en tribune officielle FIPDCP" loading="lazy">
+                                <span class="gallery-tag-overlay"><i class="fas fa-microphone"></i> Tribune Officielle</span>
                             </div>
+                            <div class="gallery-item">
+                                <img src="photo3.jpg" alt="Partenaire Institutionnel APDP Togo" loading="lazy">
+                                <span class="gallery-tag-overlay"><i class="fas fa-award"></i> Partenaire Institutionnel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section : Le Cabinet & Sa Double Compétence -->
+            <section class="about" id="about">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="badge-subtitle">Notre ADN</div>
+                        <h2>Le Cabinet <span>Datasecur Consulting</span></h2>
+                        <p class="section-subtitle">L'alliance de juristes spécialisés en droit du numérique et d'ingénieurs en sécurité informatique basés à Lomé.</p>
+                    </div>
+                    
+                    <div class="about-content">
+                        <div class="about-image-wrapper animate-on-scroll">
+                            <div class="about-image">
+                                <img src="photo2.jpg" alt="Consultants Datasecur en session d'audit" loading="lazy">
+                            </div>
+                            <div class="experience-card">
+                                <div class="exp-badge code-mono">SIÈGE SOCIAL</div>
+                                <div class="exp-city">Lomé, Togo</div>
+                                <div class="exp-text">Rue du Commerce • Interventions sur site et à distance dans toute la zone CEDEAO.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-text animate-on-scroll">
+                            <div class="about-tag"><i class="fas fa-handshake"></i> Notre Vision du Métier</div>
+                            <h3>Une conformité utile et opérationnelle, qui protège réellement votre entreprise sans lourdeur administrative</h3>
+                            <p>Avec l'entrée en vigueur de la <strong>Loi togolaise n° 2019-014</strong> et les prérogatives de l'<strong>APDP</strong>, la gouvernance des données est un pilier de confiance et de pérennité. Pour les dirigeants d'entreprises, de banques et d'établissements de santé, l'enjeu est double : répondre avec sérénité aux exigences réglementaires et protéger efficacement ses actifs numériques face aux cybermenaces.</p>
+                            <p>Chez <strong>Datasecur Consulting</strong>, nous privilégions la pédagogie et l'efficacité opérationnelle : pas de jargon abstrait ni de rapports inapplicables. Nous venons à votre rencontre, analysons vos réalités métier et bâtissons des solutions claires, directement exploitables par vos équipes au quotidien.</p>
                             
-                            <div class="contact-detail">
-                                <i class="fas fa-clock"></i>
-                                <div>
-                                    <h4>Horaires d'ouverture</h4>
-                                    <p>Lundi - Vendredi : 8h00 - 18h00<br>Samedi : 9h00 - 13h00</p>
+                            <div class="about-features">
+                                <div class="feature-card">
+                                    <div class="feature-icon-wrap"><i class="fas fa-scale-balanced icon-legal"></i></div>
+                                    <div class="feature-info">
+                                        <h4>Rigueur Juridique & APDP</h4>
+                                        <p>Maîtrise pointue de la loi togolaise, des directives CEDEAO et du RGPD pour sécuriser tous vos contrats et registres.</p>
+                                    </div>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-icon-wrap"><i class="fas fa-shield-halved icon-tech"></i></div>
+                                    <div class="feature-info">
+                                        <h4>Sécurité Technique SI</h4>
+                                        <p>Audits de vulnérabilités, vérification des sauvegardes et rédaction de chartes informatiques pragmatiques.</p>
+                                    </div>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-icon-wrap"><i class="fas fa-user-lock icon-legal"></i></div>
+                                    <div class="feature-info">
+                                        <h4>Secret Professionnel Strict</h4>
+                                        <p>Toutes nos missions font l'objet d'accords stricts de confidentialité (NDA) pour protéger vos secrets d'affaires.</p>
+                                    </div>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-icon-wrap"><i class="fas fa-comments icon-alert"></i></div>
+                                    <div class="feature-info">
+                                        <h4>Pédagogie & Disponibilité</h4>
+                                        <p>Des explications claires, des interlocuteurs dédiés et un accompagnement bienveillant pour vos collaborateurs.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="contact-form animate-on-scroll">
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <label for="name">Nom complet *</label>
-                                <div class="input-container">
-                                    <input type="text" id="name" required placeholder="Votre nom">
-                                    <i class="fas fa-user"></i>
+                </div>
+            </section>
+
+            <!-- Auto-Évaluation Section : Diagnostic Interactif & Climax avec le Double Tampon Juris-Tech -->
+            <section class="simulator-section" id="simulator">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="badge-subtitle"><i class="fas fa-clipboard-check"></i> Outil Pratique Gratuit</div>
+                        <h2>Auto-Évaluation de Votre <span>Niveau de Conformité</span></h2>
+                        <p class="section-subtitle">4 questions ciblées basées sur les exigences de la Loi APDP n° 2019-014 et du RGPD pour faire le point sur vos priorités.</p>
+                    </div>
+
+                    <div class="quiz-container animate-on-scroll">
+                        <div class="quiz-progress-bar-wrap">
+                            <div class="quiz-progress-bar" id="quizProgressBar"></div>
+                        </div>
+                        <div class="quiz-step-indicator code-mono" id="quizStepIndicator">QUESTION 1 SUR 4</div>
+
+                        <!-- Questions du Quiz -->
+                        <div class="quiz-content" id="quizContent">
+                            <!-- Question 1 -->
+                            <div class="quiz-step active" data-step="1">
+                                <h3 class="quiz-question"><i class="fas fa-building icon-legal"></i> 1. Quelle est la nature et la taille de votre organisation ?</h3>
+                                <p class="quiz-hint">Ce critère détermine le volume des procédures à formaliser et le degré de contrôle légal.</p>
+                                <div class="quiz-options">
+                                    <button class="quiz-option" data-points="1" data-answer="TPE / Commerce / Cabinet (Moins de 10 salariés)">
+                                        <div class="option-icon"><i class="fas fa-store"></i></div>
+                                        <div class="option-content">
+                                            <strong>TPE / Commerce / Cabinet</strong>
+                                            <span>Moins de 10 collaborateurs</span>
+                                        </div>
+                                    </button>
+                                    <button class="quiz-option" data-points="2" data-answer="PME / Entreprise moyenne (10 à 100 salariés)">
+                                        <div class="option-icon"><i class="fas fa-users"></i></div>
+                                        <div class="option-content">
+                                            <strong>PME / Entreprise moyenne</strong>
+                                            <span>De 10 à 100 collaborateurs</span>
+                                        </div>
+                                    </button>
+                                    <button class="quiz-option" data-points="3" data-answer="Grande Entreprise / Institution (+100 salariés)">
+                                        <div class="option-icon"><i class="fas fa-city"></i></div>
+                                        <div class="option-content">
+                                            <strong>Grande Entreprise / Institution</strong>
+                                            <span>Plus de 100 collaborateurs</span>
+                                        </div>
+                                    </button>
+                                    <button class="quiz-option" data-points="3" data-answer="Secteur Sensible : Banque, Microfinance, Clinique, Fintech">
+                                        <div class="option-icon"><i class="fas fa-hospital-user"></i></div>
+                                        <div class="option-content">
+                                            <strong>Banque, Santé, Microfinance, Fintech</strong>
+                                            <span>Données hautement sensibles ou financières</span>
+                                        </div>
+                                    </button>
                                 </div>
                             </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Adresse email *</label>
-                                <div class="input-container">
-                                    <input type="email" id="email" required placeholder="votre@email.com">
-                                    <i class="fas fa-envelope"></i>
+
+                            <!-- Question 2 -->
+                            <div class="quiz-step" data-step="2">
+                                <h3 class="quiz-question"><i class="fas fa-database icon-legal"></i> 2. Quels types de données personnelles traitez-vous ?</h3>
+                                <p class="quiz-hint">Réf. Loi n° 2019-014 : Les données sensibles exigent des autorisations préalables et un chiffrement renforcé.</p>
+                                <div class="quiz-options">
+                                    <button class="quiz-option" data-points="3" data-answer="Données sensibles : santé, coordonnées bancaires, biométrie, pièces d'identité">
+                                        <div class="option-icon"><i class="fas fa-credit-card"></i></div>
+                                        <div class="option-content">
+                                            <strong>Données Sensibles & Financières</strong>
+                                            <span>Santé, RIB/comptes, biométrie, pièces d'identité</span>
+                                        </div>
+                                    </button>
+                                    <button class="quiz-option" data-points="2" data-answer="Fichiers clients, contacts commerciaux, numéros de téléphone et adresses">
+                                        <div class="option-icon"><i class="fas fa-address-book"></i></div>
+                                        <div class="option-content">
+                                            <strong>Fichiers Clients & Marketing</strong>
+                                            <span>Coordonnées, adresses email, WhatsApp, géolocalisation</span>
+                                        </div>
+                                    </button>
+                                    <button class="quiz-option" data-points="1" data-answer="Uniquement les dossiers administratifs du personnel et factures B2B">
+                                        <div class="option-icon"><i class="fas fa-file-invoice"></i></div>
+                                        <div class="option-content">
+                                            <strong>Données Internes Courantes</strong>
+                                            <span>Contrats de travail, bulletins de paie, facturation B2B</span>
+                                        </div>
+                                    </button>
                                 </div>
                             </div>
-                            
-                            <div class="form-group">
-                                <label for="company">Entreprise / Organisation</label>
-                                <div class="input-container">
-                                    <input type="text" id="company" placeholder="Nom de votre entreprise">
-                                    <i class="fas fa-building"></i>
+
+                            <!-- Question 3 -->
+                            <div class="quiz-step" data-step="3">
+                                <h3 class="quiz-question"><i class="fas fa-book-bookmark icon-legal"></i> 3. Avez-vous formalisé votre Registre des Traitements ou désigné un DPO ?</h3>
+                                <p class="quiz-hint">Le registre est la pièce maîtresse exigée par l'APDP en cas de contrôle ou d'audit de conformité.</p>
+                                <div class="quiz-options">
+                                    <button class="quiz-option" data-points="0" data-answer="Non, nous n'avons aucun document officiel rédigé à ce jour">
+                                        <div class="option-icon"><i class="fas fa-triangle-exclamation"></i></div>
+                                        <div class="option-content">
+                                            <strong>Pas encore initié</strong>
+                                            <span>Aucun registre formalisé ni responsable désigné</span>
+                                        </div>
+                                    </button>
+                                    <button class="quiz-option" data-points="2" data-answer="Démarche partielle : politique de confidentialité en ligne mais registre interne non finalisé">
+                                        <div class="option-icon"><i class="fas fa-file-pen"></i></div>
+                                        <div class="option-content">
+                                            <strong>Démarche partielle</strong>
+                                            <span>Mentions légales rédigées, mais registre interne incomplet</span>
+                                        </div>
+                                    </button>
+                                    <button class="quiz-option" data-points="4" data-answer="Oui, Registre à jour et Délégué aux Données déclaré">
+                                        <div class="option-icon"><i class="fas fa-clipboard-check"></i></div>
+                                        <div class="option-content">
+                                            <strong>Registre complet & Référent DPO en place</strong>
+                                            <span>Traitements inventoriés et suivis régulièrement</span>
+                                        </div>
+                                    </button>
                                 </div>
                             </div>
-                            
-                            <div class="form-group">
-                                <label for="service">Service intéressé</label>
-                                <div class="input-container">
-                                    <select id="service">
-                                        <option value="">Sélectionnez un service</option>
-                                        <option value="audit">Audit de conformité</option>
-                                        <option value="security">Sécurisation des systèmes</option>
-                                        <option value="training">Formation & Sensibilisation</option>
-                                        <option value="certification">Accompagnement à la certification</option>
-                                        <option value="other">Autre</option>
-                                    </select>
-                                    <i class="fas fa-concierge-bell"></i>
+
+                            <!-- Question 4 -->
+                            <div class="quiz-step" data-step="4">
+                                <h3 class="quiz-question"><i class="fas fa-lock icon-tech"></i> 4. Quel est votre niveau de sécurité informatique sur vos données ?</h3>
+                                <p class="quiz-hint">Protection contre les rançongiciels (ransomwares), pertes accidentelles et vols d'ordinateurs.</p>
+                                <div class="quiz-options">
+                                    <button class="quiz-option" data-points="0" data-answer="Mots de passe simples, pas de sauvegarde automatique chiffrée">
+                                        <div class="option-icon"><i class="fas fa-triangle-exclamation"></i></div>
+                                        <div class="option-content">
+                                            <strong>Sécurité basique</strong>
+                                            <span>Pas de charte informatique ni de sauvegardes automatisées</span>
+                                        </div>
+                                    </button>
+                                    <button class="quiz-option" data-points="2" data-answer="Antivirus et sauvegardes régulières mais sans double authentification systématique">
+                                        <div class="option-icon"><i class="fas fa-shield"></i></div>
+                                        <div class="option-content">
+                                            <strong>Sécurité intermédiaire</strong>
+                                            <span>Antivirus et sauvegardes présents, mais failles possibles</span>
+                                        </div>
+                                    </button>
+                                    <button class="quiz-option" data-points="4" data-answer="Sauvegardes externes étanches, double authentification (2FA), accès verrouillés">
+                                        <div class="option-icon"><i class="fas fa-shield-halved"></i></div>
+                                        <div class="option-content">
+                                            <strong>Sécurité renforcée</strong>
+                                            <span>2FA obligatoire, sauvegardes étanches, droits d'accès limités</span>
+                                        </div>
+                                    </button>
                                 </div>
                             </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Message *</label>
-                                <div class="input-container">
-                                    <textarea id="message" required placeholder="Décrivez votre besoin ou posez votre question..."></textarea>
-                                    <i class="fas fa-comment-alt"></i>
+                        </div>
+
+                        <!-- CLIMAX DU QUIZ : Résultat avec l'Élément Signature (Double Tampon Juris-Tech) -->
+                        <div class="quiz-result" id="quizResult" style="display: none;">
+                            <div class="result-header">
+                                <div class="result-score-circle" id="resultScoreCircle">
+                                    <span class="score-value code-mono" id="resultScoreValue">0%</span>
+                                    <span class="score-label">Niveau Estimé</span>
+                                </div>
+                                <div class="result-verdict">
+                                    <div class="juris-tech-signature-badge">
+                                        <!-- ÉLÉMENT SIGNATURE : DOUBLE TAMPON JURIS-TECH AU CLIMAX -->
+                                        <div class="seal-pill seal-legal"><i class="fas fa-scale-balanced"></i> Volet Juridique APDP</div>
+                                        <div class="seal-pill seal-tech"><i class="fas fa-lock"></i> Volet Sécurité SI</div>
+                                    </div>
+                                    <h3 id="resultTitle">Synthèse de votre situation</h3>
+                                    <p id="resultDescription">Calcul personnalisé en fonction de vos déclarations.</p>
                                 </div>
                             </div>
-                            
-                            <button type="submit" class="btn btn-primary btn-center">Envoyer le message</button>
-                        </form>
+
+                            <div class="result-recommendations">
+                                <h4><i class="fas fa-list-check"></i> Actions concrètes à engager en priorité :</h4>
+                                <ul id="resultList">
+                                    <!-- Rempli dynamiquement par JS -->
+                                </ul>
+                            </div>
+
+                            <div class="result-cta-box">
+                                <div class="result-cta-text">
+                                    <strong>Vous souhaitez un diagnostic exhaustif sur pièces ?</strong>
+                                    <p>Nos consultants analysent vos contrats et vos infrastructures pour vous remettre votre feuille de route chiffrée.</p>
+                                </div>
+                                <div class="result-actions">
+                                    <button class="btn btn-primary" id="applyQuizToContact">
+                                        <i class="fas fa-paper-plane"></i> Transmettre mon diagnostic au cabinet
+                                    </button>
+                                    <button class="btn btn-secondary" id="restartQuiz">
+                                        <i class="fas fa-rotate-right"></i> Recommencer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <!-- Services Section : 6 Expertises Réelles avec distinction Juridique ⚖️ vs Technique 🔒 -->
+            <section class="services" id="services">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="badge-subtitle">Nos Domaines d'Intervention</div>
+                        <h2>Des Expertises Concrètes & <span>Sur-Mesure</span></h2>
+                        <p class="section-subtitle">Chaque mission apporte une réponse précise à vos obligations légales et aux exigences de sécurité de votre entreprise.</p>
+                    </div>
+                    
+                    <div class="services-grid">
+                        <!-- Service 1 : Juridique -->
+                        <div class="service-card animate-on-scroll" data-service-id="audit">
+                            <div class="service-icon icon-legal-bg">
+                                <i class="fas fa-scale-balanced icon-legal"></i>
+                            </div>
+                            <div class="service-tag tag-legal">Juridique & APDP</div>
+                            <h3>Audit & Cartographie des Données</h3>
+                            <p>Recensement exhaustif de vos fichiers clients, ressources humaines et partenaires. Vérification de la licéité des traitements au regard de la Loi togolaise 2019-014 et du RGPD.</p>
+                            <div class="service-deliverable-box">
+                                <span class="deliverable-label code-mono">LIVRABLE CONCRET :</span>
+                                <p>Rapport d'audit complet avec matrice de criticité et plan d'action de mise en conformité budgété.</p>
+                            </div>
+                            <div class="service-card-footer">
+                                <button class="btn-text-link open-service-modal" data-service="audit">
+                                    Détails & Livrables de la mission <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div> 
+                        
+                        <!-- Service 2 : Juridique -->
+                        <div class="service-card animate-on-scroll" data-service-id="dpo">
+                            <div class="service-icon icon-legal-bg">
+                                <i class="fas fa-user-shield icon-legal"></i>
+                            </div>
+                            <div class="service-tag tag-highlight">La Solution Clé en Main</div>
+                            <h3>DPO Externalisé & Délégué aux Données</h3>
+                            <p>Vous n'avez pas les ressources pour embaucher un DPO à plein temps ? Nous assumons cette fonction légale : tenue du registre, conseil permanent et interface officielle avec l'APDP.</p>
+                            <div class="service-deliverable-box">
+                                <span class="deliverable-label code-mono">LIVRABLE CONCRET :</span>
+                                <p>Registre légal des traitements tenu à jour en continu + hotline juridique dédiée pour vos questions quotidiennes.</p>
+                            </div>
+                            <div class="service-card-footer">
+                                <button class="btn-text-link open-service-modal" data-service="dpo">
+                                    Détails & Livrables de la mission <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 3 : Technique -->
+                        <div class="service-card animate-on-scroll" data-service-id="security">
+                            <div class="service-icon icon-tech-bg">
+                                <i class="fas fa-lock icon-tech"></i>
+                            </div>
+                            <div class="service-tag tag-tech">Sécurité SI</div>
+                            <h3>Sécurisation des SI & Charte Informatique</h3>
+                            <p>Évaluation technique de vos serveurs, postes de travail et sauvegardes. Rédaction de votre Charte Informatique d'entreprise pour encadrer légalement l'usage des outils par vos salariés.</p>
+                            <div class="service-deliverable-box">
+                                <span class="deliverable-label code-mono">LIVRABLE CONCRET :</span>
+                                <p>Charte Informatique interne personnalisée + PSSI + rapport de sécurisation des sauvegardes.</p>
+                            </div>
+                            <div class="service-card-footer">
+                                <button class="btn-text-link open-service-modal" data-service="security">
+                                    Détails & Livrables de la mission <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 4 : Humain / Pédagogie -->
+                        <div class="service-card animate-on-scroll" data-service-id="training">
+                            <div class="service-icon icon-alert-bg">
+                                <i class="fas fa-chalkboard-user icon-alert"></i>
+                            </div>
+                            <div class="service-tag tag-alert">Sensibilisation</div>
+                            <h3>Formation & Prévention Anti-Phishing</h3>
+                            <p>80% des failles proviennent d'une erreur humaine (email piégé, lien suspect, arnaque au président). Nous formons vos équipes avec des cas réels tirés de la vie en entreprise.</p>
+                            <div class="service-deliverable-box">
+                                <span class="deliverable-label code-mono">LIVRABLE CONCRET :</span>
+                                <p>Sessions d'ateliers pratiques en entreprise + fiches réflexes de sécurité + feuilles d'émargement officielles.</p>
+                            </div>
+                            <div class="service-card-footer">
+                                <button class="btn-text-link open-service-modal" data-service="training">
+                                    Détails & Livrables de la mission <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 5 : Norme Internationale -->
+                        <div class="service-card animate-on-scroll" data-service-id="certification">
+                            <div class="service-icon icon-tech-bg">
+                                <i class="fas fa-award icon-tech"></i>
+                            </div>
+                            <div class="service-tag tag-tech">Normes Internationales</div>
+                            <h3>Préparation à la Certification ISO 27001</h3>
+                            <p>Pour remporter des appels d'offres internationaux et rassurer vos partenaires bancaires, nous préparons votre Système de Management de la Sécurité de l'Information (SMSI).</p>
+                            <div class="service-deliverable-box">
+                                <span class="deliverable-label code-mono">LIVRABLE CONCRET :</span>
+                                <p>Dossier documentaire complet du SMSI + réalisation des audits blancs préalables à la certification.</p>
+                            </div>
+                            <div class="service-card-footer">
+                                <button class="btn-text-link open-service-modal" data-service="certification">
+                                    Détails & Livrables de la mission <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 6 : Urgence Technique & Juridique -->
+                        <div class="service-card animate-on-scroll" data-service-id="incident">
+                            <div class="service-icon icon-alert-bg">
+                                <i class="fas fa-triangle-exclamation icon-alert"></i>
+                            </div>
+                            <div class="service-tag tag-urgent">Assistance d'Urgence</div>
+                            <h3>Gestion de Crise & Notification sous 72h</h3>
+                            <p>En cas de vol de données, de rançongiciel ou de piratage, nous intervenons immédiatement pour isoler les failles et rédiger la notification légale obligatoire sous 72 heures à l'APDP.</p>
+                            <div class="service-deliverable-box">
+                                <span class="deliverable-label code-mono">LIVRABLE CONCRET :</span>
+                                <p>Cellule de crise réactive + dossier officiel de notification conforme transmis à l'autorité sous 72h.</p>
+                            </div>
+                            <div class="service-card-footer">
+                                <button class="btn-text-link open-service-modal" data-service="incident">
+                                    Détails & Livrables de la mission <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Packages Section : 3 Formules Claires & Transparentes -->
+            <section class="packages-section" id="packages">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="badge-subtitle">Formules de Mission</div>
+                        <h2>Nos Formules d'<span>Accompagnement</span></h2>
+                        <p class="section-subtitle">Des modalités d'intervention transparentes, adaptées à la taille et à la maturité de votre structure.</p>
+                    </div>
+
+                    <div class="packages-grid">
+                        <!-- Pack 1 -->
+                        <div class="package-card animate-on-scroll">
+                            <div class="package-header">
+                                <div class="package-icon-wrap icon-legal-bg"><i class="fas fa-magnifying-glass-chart icon-legal"></i></div>
+                                <h3>Pack Diagnostic Initial</h3>
+                                <p class="package-desc">Idéal pour savoir exactement où vous en êtes et identifier ce qu'il vous manque pour être en règle.</p>
+                            </div>
+                            <div class="package-badge-type code-mono">Mission Flash (7 à 14 jours)</div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check icon-success"></i> Entretiens avec vos responsables métiers et DSI</li>
+                                <li><i class="fas fa-check icon-success"></i> Inventaire exhaustif des logiciels et fichiers manipulés</li>
+                                <li><i class="fas fa-check icon-success"></i> Revue de vos mentions d'information et contrats prestataires</li>
+                                <li><i class="fas fa-check icon-success"></i> Rapport de synthèse avec plan d'action priorisé</li>
+                                <li class="text-muted"><i class="fas fa-times"></i> DPO externe désigné à l'année</li>
+                                <li class="text-muted"><i class="fas fa-times"></i> Assistance continue au quotidien</li>
+                            </ul>
+                            <button class="btn btn-secondary select-package-btn" data-package="Pack Diagnostic Initial">
+                                Demander un devis
+                            </button>
+                        </div>
+
+                        <!-- Pack 2 (Featured) -->
+                        <div class="package-card featured animate-on-scroll">
+                            <div class="popular-ribbon">La formule plébiscitée</div>
+                            <div class="package-header">
+                                <div class="package-icon-wrap icon-legal-bg"><i class="fas fa-user-shield icon-legal"></i></div>
+                                <h3>Pack DPO Externe & Suivi</h3>
+                                <p class="package-desc">La formule complète pour déléguer toute la gestion de votre conformité en restant serein.</p>
+                            </div>
+                            <div class="package-badge-type code-mono">Abonnement Mensuel / Annuel</div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check icon-success"></i> <strong>DPO certifié dédié</strong> déclaré pour votre entreprise auprès de l'APDP</li>
+                                <li><i class="fas fa-check icon-success"></i> Création et tenue à jour de votre Registre des Traitements</li>
+                                <li><i class="fas fa-check icon-success"></i> Rédaction de vos chartes internes et clauses contractuelles</li>
+                                <li><i class="fas fa-check icon-success"></i> Traitement des demandes d'accès ou réclamations de vos clients</li>
+                                <li><i class="fas fa-check icon-success"></i> Interlocuteur officiel en cas de contrôle de l'APDP</li>
+                                <li><i class="fas fa-check icon-success"></i> Hotline prioritaire pour toutes vos questions urgentes</li>
+                            </ul>
+                            <button class="btn btn-primary select-package-btn" data-package="Pack DPO Externe & Suivi">
+                                Choisir cette formule
+                            </button>
+                        </div>
+
+                        <!-- Pack 3 -->
+                        <div class="package-card animate-on-scroll">
+                            <div class="package-header">
+                                <div class="package-icon-wrap icon-tech-bg"><i class="fas fa-shield-virus icon-tech"></i></div>
+                                <h3>Pack Sécurité Globale & SI</h3>
+                                <p class="package-desc">Pour les entreprises manipulant des données critiques et exigeant un haut niveau de protection.</p>
+                            </div>
+                            <div class="package-badge-type code-mono">Projet Global Entreprise</div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check icon-success"></i> L'intégralité des prestations du Pack DPO Externe</li>
+                                <li><i class="fas fa-check icon-success"></i> Audit technique de vos serveurs, réseaux et sauvegardes</li>
+                                <li><i class="fas fa-check icon-success"></i> Tests de résistance et détection des failles critiques</li>
+                                <li><i class="fas fa-check icon-success"></i> Sessions de formation pour l'ensemble des collaborateurs</li>
+                                <li><i class="fas fa-check icon-success"></i> Préparation aux certifications (ISO 27001)</li>
+                                <li><i class="fas fa-check icon-success"></i> <strong>Support d'urgence en cas d'incident 24/7</strong></li>
+                            </ul>
+                            <button class="btn btn-secondary select-package-btn" data-package="Pack Sécurité Globale & SI">
+                                Demander un devis
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Methodology Section : 4 Étapes Séquentielles -->
+            <section class="methodology-section" id="methodology">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="badge-subtitle">Notre Démarche</div>
+                        <h2>Comment Se Déroule <span>Une Mission</span> ?</h2>
+                        <p class="section-subtitle">Un processus structuré et transparent, conçu pour respecter le rythme et le fonctionnement de vos équipes.</p>
+                    </div>
+
+                    <div class="timeline-grid">
+                        <div class="timeline-step animate-on-scroll">
+                            <div class="step-badge code-mono">01</div>
+                            <div class="step-icon"><i class="fas fa-magnifying-glass icon-legal"></i></div>
+                            <h3>1. Cadrage & État des Lieux</h3>
+                            <p>Nous échangeons avec vous et vos équipes pour cartographier vos outils, vos fichiers clients, vos contrats et vos habitudes de travail.</p>
+                        </div>
+
+                        <div class="timeline-step animate-on-scroll">
+                            <div class="step-badge code-mono">02</div>
+                            <div class="step-icon"><i class="fas fa-compass-drafting icon-legal"></i></div>
+                            <h3>2. Rédaction des Documents</h3>
+                            <p>Nous rédigeons votre Registre des Traitements, vos mentions d'information, vos clauses de sous-traitance et vos chartes internes.</p>
+                        </div>
+
+                        <div class="timeline-step animate-on-scroll">
+                            <div class="step-badge code-mono">03</div>
+                            <div class="step-icon"><i class="fas fa-people-group icon-alert"></i></div>
+                            <h3>3. Sensibilisation & Déploiement</h3>
+                            <p>Nous formons vos salariés aux bons réflexes de sécurité et nous vous aidons à appliquer concrètement les nouvelles consignes.</p>
+                        </div>
+
+                        <div class="timeline-step animate-on-scroll">
+                            <div class="step-badge code-mono">04</div>
+                            <div class="step-icon"><i class="fas fa-arrows-spin icon-tech"></i></div>
+                            <h3>4. Suivi & Maintien Actif</h3>
+                            <p>Nous restons à vos côtés pour actualiser le registre lors du lancement de nouveaux projets et répondre aux questions du quotidien.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Section : 4 Consultants Réels & Certifiés (En veille / Masqué visuellement) -->
+            <section class="team-section" id="team" style="display: none;" aria-hidden="true">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="badge-subtitle">L'Équipe d'Intervention</div>
+                        <h2>Vos Consultants & <span>Interlocuteurs</span></h2>
+                        <p class="section-subtitle">Des professionnels chevronnés, basés à Lomé, qui interviennent directement sur vos dossiers.</p>
+                    </div>
+
+                    <div class="team-grid">
+                        <!-- Member 1 -->
+                        <div class="team-member animate-on-scroll">
+                            <div class="member-image">
+                                <img src="photo5.jpg" alt="Kodjo Mensah - Directeur Associé & Consultant DPO" loading="lazy">
+                                <div class="member-overlay">
+                                    <div class="member-certs"><span class="cert-pill code-mono">DPO Certifié</span><span class="cert-pill code-mono">Spécialiste APDP</span></div>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h3>Kodjo Mensah</h3>
+                                <div class="member-position">Directeur Associé & Consultant DPO</div>
+                                <p class="member-desc">Juriste chevronné spécialisé en droit du numérique, gouvernance des données personnelles et conformité APDP / RGPD depuis plus de 12 ans.</p>
+                                <div class="member-social">
+                                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Kodjo Mensah"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="mailto:contact@datasecur-consulting.tg" aria-label="Email Kodjo Mensah"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Member 2 -->
+                        <div class="team-member animate-on-scroll">
+                            <div class="member-image">
+                                <img src="photo6.jpg" alt="Agrippine Dédé d'ALMEIDA - Experte Cybersécurité & Audits SI" loading="lazy">
+                                <div class="member-overlay">
+                                    <div class="member-certs"><span class="cert-pill code-mono">Cybersécurité</span><span class="cert-pill code-mono">FIPDCP Tech</span></div>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h3>Agrippine Dédé d'ALMEIDA</h3>
+                                <div class="member-position">Experte Cybersécurité & Audits SI</div>
+                                <p class="member-desc">Ingénieure experte en sécurité des systèmes d'information, audits de vulnérabilité et responsable de la Commission Technologie du FIPDCP.</p>
+                                <div class="member-social">
+                                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Agrippine Dédé d'ALMEIDA"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="mailto:contact@datasecur-consulting.tg" aria-label="Email Agrippine Dédé d'ALMEIDA"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Member 3 -->
+                        <div class="team-member animate-on-scroll">
+                            <div class="member-image">
+                                <img src="photo.jpg" alt="Gaël ELOM D'ALMEIDA - Juriste Protection des Données" loading="lazy">
+                                <div class="member-overlay">
+                                    <div class="member-certs"><span class="cert-pill code-mono">Juriste PDCP</span><span class="cert-pill code-mono">Commissaire FIPDCP</span></div>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h3>Gaël ELOM D'ALMEIDA</h3>
+                                <div class="member-position">Juriste Droit du Numérique & PDCP</div>
+                                <p class="member-desc">Juriste spécialisé en protection des données à caractère personnel, commissaire général du FIPDCP et expert en encadrement contractuel IT.</p>
+                                <div class="member-social">
+                                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Gaël ELOM D'ALMEIDA"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="mailto:contact@datasecur-consulting.tg" aria-label="Email Gaël ELOM D'ALMEIDA"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Member 4 -->
+                        <div class="team-member animate-on-scroll">
+                            <div class="member-image">
+                                <img src="photo6.jpg" alt="Labioko Sandra Marilyne AGBODJAN - Responsable Formations & Sensibilisation" loading="lazy">
+                                <div class="member-overlay">
+                                    <div class="member-certs"><span class="cert-pill code-mono">Formatrice Pro</span><span class="cert-pill code-mono">Sensibilisation</span></div>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h3>Sandra M. AGBODJAN</h3>
+                                <div class="member-position">Responsable Formations & Sensibilisation</div>
+                                <p class="member-desc">Spécialiste de la formation continue et de la communication digitale, animant les ateliers pratiques de prévention du risque cyber en entreprise.</p>
+                                <div class="member-social">
+                                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Sandra AGBODJAN"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="mailto:contact@datasecur-consulting.tg" aria-label="Email Sandra AGBODJAN"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section : Cas Clients Réels -->
+            <section class="testimonials-section" id="testimonials">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="badge-subtitle">Retours d'Expérience</div>
+                        <h2>Ce Que Disent <span>Nos Clients</span></h2>
+                        <p class="section-subtitle">Des entreprises et institutions qui ont sécurisé leurs activités avec Datasecur Consulting.</p>
+                    </div>
+
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card animate-on-scroll">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <div class="testimonial-stars" aria-label="5 étoiles sur 5">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Face aux exigences de nos partenaires bancaires, nous devions formaliser notre registre des traitements rapidement. L'équipe de Datasecur a su analyser notre plateforme en quelques jours sans perturber notre exploitation quotidienne."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"><i class="fas fa-user-tie"></i></div>
+                                <div>
+                                    <h4>Jean-Paul K.</h4>
+                                    <span>Directeur Informatique - Société de Services Financiers & Transfert</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card animate-on-scroll">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <div class="testimonial-stars" aria-label="5 étoiles sur 5">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"La gestion des dossiers médicaux de nos patients exigeait une confidentialité sans faille. Datasecur a audité nos procédures d'accueil et formé l'ensemble de notre personnel soignant et administratif avec beaucoup de clarté."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"><i class="fas fa-user-doctor"></i></div>
+                                <div>
+                                    <h4>Dr. Sylvie M.</h4>
+                                    <span>Directrice Médicale - Clinique Privée à Lomé</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card animate-on-scroll">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <div class="testimonial-stars" aria-label="5 étoiles sur 5">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Avoir Datasecur comme DPO externalisé nous permet de nous concentrer sur le développement commercial de notre marketplace en sachant que nos contrats et mentions légales sont 100% en règle."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"><i class="fas fa-laptop-code"></i></div>
+                                <div>
+                                    <h4>Marc E.</h4>
+                                    <span>Fondateur & Directeur Général - Plateforme E-commerce</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section : Vraies Questions du Terrain avec Recherche & Filtres -->
+            <section class="faq" id="faq">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="badge-subtitle">Réponses Claires</div>
+                        <h2>Foire Aux <span>Questions</span></h2>
+                        <p class="section-subtitle">Les réponses aux questions que se posent fréquemment les dirigeants d'entreprise au Togo et dans la sous-région.</p>
+                    </div>
+
+                    <!-- FAQ Controls -->
+                    <div class="faq-controls animate-on-scroll">
+                        <div class="faq-search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="faqSearchInput" placeholder="Rechercher une question (ex: APDP, sanctions, DPO, délai, coût...)" aria-label="Rechercher dans la FAQ">
+                            <button id="faqSearchClear" class="faq-search-clear" style="display: none;" aria-label="Effacer la recherche">&times;</button>
+                        </div>
+                        <div class="faq-filter-pills" id="faqFilterPills">
+                            <button class="filter-pill active" data-category="all">Toutes les questions</button>
+                            <button class="filter-pill" data-category="loi">Loi APDP & Obligations</button>
+                            <button class="filter-pill" data-category="dpo">DPO Externalisé</button>
+                            <button class="filter-pill" data-category="mission">Déroulement d'une Mission</button>
+                            <button class="filter-pill" data-category="securite">Sécurité & Sanctions</button>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-container" id="faqContainer">
+                        <div class="faq-item animate-on-scroll" data-category="loi">
+                            <div class="faq-question">
+                                <h3>Mon entreprise au Togo est-elle obligée de se conformer à la loi sur les données personnelles ?</h3>
+                                <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p><strong>Oui, absolument.</strong> En vertu de la <em>Loi n° 2019-014 relative à la protection des données à caractère personnel au Togo</em>, toute organisation (entreprise privée, ONG, établissement public, banque, clinique) qui gère des informations identifiant des personnes physiques (salariés, clients, prospects, fournisseurs) est tenue d'appliquer la loi et de tenir un registre des traitements.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item animate-on-scroll" data-category="dpo">
+                            <div class="faq-question">
+                                <h3>Pourquoi faire appel à un DPO externe plutôt que de désigner un salarié en interne ?</h3>
+                                <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Désigner un salarié en interne pose souvent deux problèmes majeurs : le manque de temps/compétence juridique spécialisée, et surtout le <strong>conflit d'intérêts</strong> (un DSI, DRH ou DG ne peut pas légalement être son propre contrôleur DPO).</p>
+                                <p>En confiant cette mission à Datasecur Consulting, vous bénéficiez d'une équipe certifiée, totalement indépendante, pour un coût forfaitaire très inférieur au salaire d'un cadre à plein temps.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item animate-on-scroll" data-category="mission">
+                            <div class="faq-question">
+                                <h3>Combien de temps prend un audit et cela va-t-il perturber le travail de nos équipes ?</h3>
+                                <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Pour un audit initial standard, la mission dure entre <strong>1 et 3 semaines</strong>. Notre méthodologie est conçue pour être très peu chronophage pour vos collaborateurs : nous menons des entretiens ciblés de 45 minutes avec les responsables de départements clés, puis nous rédigeons l'intégralité des livrables de notre côté.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item animate-on-scroll" data-category="securite">
+                            <div class="faq-question">
+                                <h3>Quelles sont les sanctions réelles en cas de non-conformité ou de fuite de données ?</h3>
+                                <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Les textes prévoient des <strong>mises en demeure publiques</strong>, des <strong>amendes administratives et pénales significatives</strong>, ainsi que l'interdiction de poursuivre certains traitements de données.</p>
+                                <p>Mais au-delà des sanctions financières, le risque majeur est la <strong>perte de confiance de vos clients et partenaires d'affaires</strong>, ainsi que le risque de blocage lors des appels d'offres ou partenariats internationaux.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item animate-on-scroll" data-category="loi">
+                            <div class="faq-question">
+                                <h3>Nous travaillons avec des clients européens : le RGPD s'applique-t-il à nous ?</h3>
+                                <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p><strong>Oui.</strong> Le RGPD s'applique de manière extraterritoriale dès lors que vous proposez des services ou traitez des données de résidents européens, ou que vous êtes sous-traitant d'une entreprise basée en Europe. Nous vous accompagnons pour aligner vos contrats et clauses sur ces exigences.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item animate-on-scroll" data-category="securite">
+                            <div class="faq-question">
+                                <h3>Que devons-nous faire en urgence si nous constatons un piratage ou une fuite de données ?</h3>
+                                <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>1. <strong>Isolez immédiatement</strong> les machines ou boîtes emails compromises sans détruire les preuves.</p>
+                                <p>2. <strong>Contactez notre cellule d'assistance</strong> au <strong>+228 22 21 20 19</strong>.</p>
+                                <p>3. <strong>Respectez le délai légal de 72 heures</strong> : nous vous aidons à documenter l'incident et à transmettre la notification obligatoire à l'autorité de contrôle dans les formes prescrites.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section : Propre, Rassurante & Directe -->
+            <section class="contact" id="contact">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="badge-subtitle badge-white">Échanger Directement</div>
+                        <h2>Contactez <span>Nos Consultants</span></h2>
+                        <p class="section-subtitle section-subtitle-light">Vous avez une question sur vos obligations ou souhaitez un devis pour votre entreprise ? Notre équipe étudie votre demande et vous apporte une réponse claire.</p>
+                    </div>
+                    
+                    <div class="contact-content">
+                        <div class="contact-info animate-on-scroll">
+                            <h3>Discutons de votre situation</h3>
+                            <p>Venez nous rencontrer à nos bureaux de Lomé ou convenons d'un échange téléphonique / visioconférence sans aucun engagement.</p>
+                            
+                            <div class="contact-details">
+                                <div class="contact-detail">
+                                    <div class="detail-icon"><i class="fas fa-location-dot"></i></div>
+                                    <div>
+                                        <h4>Bureaux & Adresse</h4>
+                                        <p>Rue du Commerce, Immeuble Datasecur, Lomé, Togo</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-detail">
+                                    <div class="detail-icon"><i class="fas fa-phone"></i></div>
+                                    <div>
+                                        <h4>Téléphone Fixe</h4>
+                                        <p><a href="tel:+22822212019">+228 22 21 20 19</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-detail">
+                                    <div class="detail-icon"><i class="fab fa-whatsapp"></i></div>
+                                    <div>
+                                        <h4>WhatsApp Professionnel</h4>
+                                        <p><a href="https://wa.me/22822212019?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20concernant%20vos%20services%20en%20cybers%C3%A9curit%C3%A9%20et%20conformit%C3%A9." target="_blank" rel="noopener noreferrer">+228 22 21 20 19</a></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-detail">
+                                    <div class="detail-icon"><i class="fas fa-envelope"></i></div>
+                                    <div>
+                                        <h4>Courrier Électronique</h4>
+                                        <p><a href="mailto:contact@datasecur-consulting.tg">contact@datasecur-consulting.tg</a></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-detail">
+                                    <div class="detail-icon"><i class="fas fa-clock"></i></div>
+                                    <div>
+                                        <h4>Horaires d'Accueil</h4>
+                                        <p>Lundi - Vendredi : 08h00 - 18h00<br>Samedi : 09h00 - 13h00</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="emergency-contact-box">
+                                <i class="fas fa-shield-virus icon-alert"></i>
+                                <div>
+                                    <strong>Urgence Violation ou Piratage de Données ?</strong>
+                                    <span>Assistance réactive pour la notification légale sous 72h.</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form-wrapper animate-on-scroll">
+                            <form id="contactForm" class="contact-form" novalidate>
+                                <!-- Encart Diagnostic Joint (Actif après auto-évaluation) -->
+                                <div id="diagnosticSummaryBadge" class="diagnostic-summary-attached" style="display: none;">
+                                    <div class="summary-badge-left">
+                                        <span class="summary-badge-score code-mono" id="attachedScoreVal">0%</span>
+                                        <div class="summary-badge-info">
+                                            <strong id="attachedVerdictTitle">Diagnostic de Conformité Joint</strong>
+                                            <span id="attachedVerdictDesc">Votre auto-évaluation sera transmise au consultant dédié.</span>
+                                        </div>
+                                    </div>
+                                    <button type="button" id="removeAttachedDiagnostic" class="btn-remove-badge" title="Retirer le diagnostic">&times;</button>
+                                </div>
+
+                                <div class="form-header-msg">
+                                    <i class="fas fa-user-shield icon-legal"></i> Échanges confidentiels sous secret professionnel • Examen attentif par notre équipe à Lomé
+                                </div>
+                                
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="name">Votre Nom & Prénom <span class="required-star">*</span></label>
+                                        <div class="input-container">
+                                            <input type="text" id="name" name="name" required placeholder="Ex: Jean Koffi">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <span class="field-error" id="nameError"></span>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="email">Adresse Email Professionnelle <span class="required-star">*</span></label>
+                                        <div class="input-container">
+                                            <input type="email" id="email" name="email" required placeholder="nom@entreprise.tg">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <span class="field-error" id="emailError"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="phone">Numéro Téléphone / WhatsApp</label>
+                                        <div class="input-container">
+                                            <input type="tel" id="phone" name="phone" placeholder="+228 90 00 00 00">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="company">Entreprise ou Structure</label>
+                                        <div class="input-container">
+                                            <input type="text" id="company" name="company" placeholder="Nom de votre organisation">
+                                            <i class="fas fa-building"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="service">Objet de votre demande</label>
+                                    <div class="input-container">
+                                        <select id="service" name="service">
+                                            <option value="">Sélectionnez l'objet...</option>
+                                            <option value="audit">Audit & Cartographie des Données</option>
+                                            <option value="dpo">DPO Externalisé / Délégué aux données</option>
+                                            <option value="security">Sécurisation des SI & Charte Informatique</option>
+                                            <option value="training">Formation & Prévention Anti-Phishing</option>
+                                            <option value="certification">Accompagnement Certification ISO 27001</option>
+                                            <option value="incident">Urgence : Fuite de données / Cyberattaque</option>
+                                            <option value="pack-express">Pack Diagnostic Initial</option>
+                                            <option value="pack-dpo">Pack DPO Externe & Suivi</option>
+                                            <option value="pack-360">Pack Sécurité Globale & SI</option>
+                                            <option value="other">Autre demande de renseignement</option>
+                                        </select>
+                                        <i class="fas fa-layer-group"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Votre Message ou Contexte <span class="required-star">*</span></label>
+                                    <div class="input-container">
+                                        <textarea id="message" name="message" required placeholder="Expliquez brièvement votre besoin (secteur d'activité, objectifs de mise en conformité, questions particulières)..."></textarea>
+                                        <i class="fas fa-comment-dots textarea-icon"></i>
+                                    </div>
+                                    <span class="field-error" id="messageError"></span>
+                                </div>
+
+                                <div class="form-consent">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="contactConsent" required checked>
+                                        <span>J'accepte que mes coordonnées soient utilisées par Datasecur Consulting pour me recontacter au sujet de ma demande.</span>
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-block" id="submitContactBtn">
+                                    <span><i class="fas fa-paper-plane"></i> Envoyer ma demande</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
         <!-- Footer -->
         <footer>
             <div class="container">
                 <div class="footer-content">
-                    <div class="footer-logo">
-                        <img src="data-secur/logo-datasecur-blanc.png" alt="Datasecur Consulting Logo" class="footer-logo-img">
-                        <p>Votre conformité, notre engagement</p>
-                        <p>Expert en mise en conformité et protection des données personnelles.</p>
+                    <div class="footer-col footer-logo">
+                        <img src="data-secur/logo-datasecur-blanc.png" alt="Datasecur Consulting Logo" class="footer-logo-img logo-light-img">
+                        <p class="footer-motto">Votre conformité, notre engagement.</p>
+                        <p>Cabinet d'expertise juridique et technique basé à Lomé, dédié à la protection des données personnelles (Loi APDP n° 2019-014, RGPD) et à la sécurisation des systèmes d'information.</p>
                         
                         <div class="social-links">
-                            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://wa.me/22822212019?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20concernant%20vos%20services%20en%20cybers%C3%A9curit%C3%A9%20et%20conformit%C3%A9." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                     
-                    <div class="footer-links">
-                        <h4>Liens rapides</h4>
+                    <div class="footer-col footer-links">
+                        <h4>Navigation</h4>
                         <ul>
                             <li><a href="#home"><i class="fas fa-chevron-right"></i> Accueil</a></li>
-                            <li><a href="#about"><i class="fas fa-chevron-right"></i> À propos</a></li>
-                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
-                            <li><a href="#team"><i class="fas fa-chevron-right"></i> Notre équipe</a></li>
-                            <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                            <li><a href="#about"><i class="fas fa-chevron-right"></i> Le Cabinet</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Nos Expertises</a></li>
+                            <li><a href="#simulator"><i class="fas fa-chevron-right"></i> Auto-Évaluation</a></li>
+                            <li><a href="#packages"><i class="fas fa-chevron-right"></i> Formules</a></li>
+                            <li><a href="#methodology"><i class="fas fa-chevron-right"></i> Méthodologie</a></li>
+                            <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact & Devis</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col footer-services-links">
+                        <h4>Missions Clés</h4>
+                        <ul>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Audit de Conformité APDP</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> DPO Délégué Externe</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Sécurisation des Systèmes SI</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Formations des Équipes</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Préparation ISO 27001</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Gestion de Crise 72h</a></li>
                         </ul>
                     </div>
                     
-                    <div class="footer-contact">
-                        <h4>Contact</h4>
-                        <p><i class="fas fa-map-marker-alt"></i> Rue du Commerce, Immeuble Datasecur</p>
+                    <div class="footer-col footer-contact">
+                        <h4>Coordonnées</h4>
+                        <p><i class="fas fa-location-dot"></i> Rue du Commerce, Immeuble Datasecur, Lomé, Togo</p>
                         <p><i class="fas fa-phone"></i> +228 22 21 20 19</p>
                         <p><i class="fas fa-envelope"></i> contact@datasecur-consulting.tg</p>
-                        <p><i class="fas fa-clock"></i> Lundi - Vendredi : 8h00 - 18h00</p>
+                        <p><i class="fas fa-clock"></i> Lun - Ven : 08h00 - 18h00</p>
                     </div>
                     
-                    <div class="footer-info">
-                        <h4>Informations légales</h4>
-                        <p><a href="#" id="showMentionsLegales"><i class="fas fa-gavel"></i> Mentions légales</a></p>
-                        <p><a href="#" id="showPrivacyPolicy"><i class="fas fa-user-shield"></i> Politique de confidentialité</a></p>
-                        <p><a href="#" id="showCookiePolicyFooter"><i class="fas fa-cookie-bite"></i> Gestion des cookies</a></p>
-                        <p><a href="#" id="showCredits"><i class="fas fa-code"></i> Crédits</a></p>
-                    </div>
-                    
-                    <div class="footer-newsletter">
-                        <h4>Newsletter</h4>
-                        <p>Inscrivez-vous à notre newsletter pour recevoir nos actualités sur la protection des données et la sécurité numérique.</p>
-                        <form class="newsletter-form">
-                            <input type="email" placeholder="Votre adresse email" required>
-                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    <div class="footer-col footer-newsletter">
+                        <h4>Veille & Actualités</h4>
+                        <p>Recevez périodiquement nos fiches pratiques sur les réglementations et la sécurité des données.</p>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <input type="email" placeholder="Votre email professionnel" required aria-label="Votre email">
+                            <button type="submit" aria-label="S'inscrire"><i class="fas fa-paper-plane"></i></button>
                         </form>
+                        <div class="footer-info-links">
+                            <a href="#" id="showMentionsLegales"><i class="fas fa-gavel"></i> Mentions Légales</a>
+                            <a href="#" id="showPrivacyPolicy"><i class="fas fa-user-shield"></i> Confidentialité</a>
+                            <a href="#" id="showCookiePolicyFooter"><i class="fas fa-cookie-bite"></i> Cookies</a>
+                            <a href="#" id="showCredits"><i class="fas fa-code"></i> Crédits</a>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="copyright">
-                    <p>&copy; 2023 Datasecur Consulting. Tous droits réservés. </p>
+                    <p>&copy; 2026 Datasecur Consulting. Tous droits réservés. Cabinet de conseil à Lomé - Togo.</p>
                 </div>
             </div>
         </footer>
     </div>
 
-    <!-- Legal Pages -->
-    <!-- Mentions Légales -->
+    <!-- Legal Pages Sub-Views -->
+    <!-- 1. Mentions Légales -->
     <div class="legal-page" id="mentionsLegalesPage">
         <div class="legal-hero">
             <div class="container">
+                <div class="badge-subtitle badge-white">Informations Légales</div>
                 <h1>Mentions Légales</h1>
-                <p>Informations légales concernant Datasecur Consulting et les conditions d'utilisation de ce site.</p>
-                <a href="#" class="btn btn-white back-to-legal-home">Retour à l'accueil</a>
+                <p>Informations relatives à l'éditeur du site Datasecur Consulting.</p>
+                <a href="#" class="btn btn-white back-to-legal-home"><i class="fas fa-arrow-left"></i> Retour au site</a>
             </div>
         </div>
         
         <div class="container">
             <div class="legal-content">
                 <div class="legal-section">
-                    <h2>1. Informations générales</h2>
-                    <p><strong>Nom de l'entreprise :</strong> Datasecur Consulting</p>
-                    <p><strong>Forme juridique :</strong> Cabinet de conseil en conformité et protection des données personnelles</p>
-                    <p><strong>Siège social :</strong> Rue du Commerce, Immeuble Datasecur</p>
+                    <h2>1. Éditeur de la plateforme</h2>
+                    <p><strong>Dénomination :</strong> Datasecur Consulting</p>
+                    <p><strong>Activité :</strong> Cabinet de conseil en conformité légale des données (APDP, RGPD) et sécurité des systèmes d'information.</p>
+                    <p><strong>Siège social :</strong> Rue du Commerce, Immeuble Datasecur, Lomé, Togo</p>
                     <p><strong>Téléphone :</strong> +228 22 21 20 19</p>
                     <p><strong>Email :</strong> contact@datasecur-consulting.tg</p>
-                    <p><strong>Directeur de la publication :</strong> Kodjo Mensah</p>
-                    <p><strong>Hébergeur :</strong> [Nom de l'hébergeur] - [Adresse de l'hébergeur]</p>
+                    <p><strong>Directeur de la publication :</strong> Kodjo Mensah, Directeur Général</p>
                 </div>
                 
                 <div class="legal-section">
-                    <h2>2. Objet du site</h2>
-                    <p>Le présent site a pour objet de présenter les activités de Datasecur Consulting, cabinet spécialisé dans l'accompagnement des entreprises vers la conformité et la protection des données personnelles et la sécurisation de leurs systèmes d'information.</p>
+                    <h2>2. Propriété intellectuelle</h2>
+                    <p>L'ensemble des contenus (textes, méthodologies, infographies, logos) figurant sur ce site sont la propriété exclusive de Datasecur Consulting. Toute reproduction sans accord écrit préalable est interdite.</p>
                 </div>
                 
                 <div class="legal-section">
-                    <h2>3. Propriété intellectuelle</h2>
-                    <p>Tous les éléments du site (textes, graphismes, logos, images, vidéos, etc.) sont la propriété exclusive de Datasecur Consulting ou font l'objet d'une autorisation d'utilisation. Toute reproduction sans autorisation est interdite.</p>
-                </div>
-                
-                <div class="legal-section">
-                    <h2>4. Limitation de responsabilité</h2>
-                    <p>Les informations contenues sur ce site sont aussi précises que possible, mais peuvent contenir des inexactitudes. Datasecur Consulting ne peut être tenu responsable des dommages directs et indirects liés à l'utilisation du site.</p>
-                </div>
-                
-                <div class="legal-section">
-                    <h2>5. Liens hypertextes</h2>
-                    <p>Le site peut contenir des liens vers d'autres sites. Datasecur Consulting n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.</p>
-                </div>
-                
-                <div class="legal-section">
-                    <h2>6. Droit applicable</h2>
-                    <p>Les présentes mentions légales sont régies par le droit en vigueur. En cas de litige, les tribunaux compétents seront saisis.</p>
+                    <h2>3. Portée des informations</h2>
+                    <p>Les informations et simulateurs disponibles sur ce site sont mis à disposition à titre d'information générale et d'aide à la décision. Ils ne remplacent pas une consultation personnalisée adaptée aux spécificités de votre structure.</p>
                 </div>
                 
                 <div class="back-to-home-legal">
-                    <a href="#" class="btn btn-secondary back-to-legal-home">Retour à l'accueil</a>
+                    <a href="#" class="btn btn-primary back-to-legal-home"><i class="fas fa-arrow-left"></i> Retour à l'accueil</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Politique de Confidentialité -->
+    <!-- 2. Politique de Confidentialité -->
     <div class="legal-page" id="privacyPolicyPage">
         <div class="legal-hero">
             <div class="container">
+                <div class="badge-subtitle badge-white">Vie Privée</div>
                 <h1>Politique de Confidentialité</h1>
-                <p>Comment Datasecur Consulting collecte, utilise et protège vos données personnelles.</p>
-                <a href="#" class="btn btn-white back-to-legal-home">Retour à l'accueil</a>
+                <p>Nos engagements de protection de vos données personnelles.</p>
+                <a href="#" class="btn btn-white back-to-legal-home"><i class="fas fa-arrow-left"></i> Retour au site</a>
             </div>
         </div>
         
         <div class="container">
             <div class="legal-content">
                 <div class="legal-section">
-                    <h2>1. Introduction</h2>
-                    <p>Datasecur Consulting s'engage à protéger la vie privée des utilisateurs de son site web. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos données personnelles.</p>
+                    <h2>1. Principes appliqués</h2>
+                    <p>Datasecur Consulting applique strictement les principes de minimisation, de transparence et de sécurité conformément à la Loi n° 2019-014 du Togo et au RGPD.</p>
                 </div>
                 
                 <div class="legal-section">
                     <h2>2. Données collectées</h2>
-                    <p>Nous collectons les données suivantes :</p>
-                    <ul>
-                        <li><strong>Données de contact :</strong> Nom, prénom, adresse email, numéro de téléphone, entreprise, fonction</li>
-                        <li><strong>Données de navigation :</strong> Adresse IP, type de navigateur, pages visitées, durée de visite</li>
-                        <li><strong>Données de formulaire :</strong> Informations fournies via nos formulaires de contact</li>
-                    </ul>
+                    <p>Nous traitons uniquement les informations renseignées volontairement dans notre formulaire de contact (Nom, email, téléphone, entreprise, message) dans l'unique but de répondre à votre demande commerciale ou technique.</p>
                 </div>
                 
                 <div class="legal-section">
-                    <h2>3. Finalités du traitement</h2>
-                    <ul>
-                        <li>Répondre à vos demandes d'information</li>
-                        <li>Vous envoyer notre newsletter (avec votre consentement)</li>
-                        <li>Améliorer notre site web et nos services</li>
-                        <li>Respecter nos obligations légales</li>
-                    </ul>
+                    <h2>3. Confidentialité & Sécurité</h2>
+                    <p>Vos informations ne sont jamais vendues, cédées ou transmises à des tiers. Les communications sur ce site sont protégées par chiffrement HTTPS.</p>
                 </div>
                 
                 <div class="legal-section">
-                    <h2>4. Base légale du traitement</h2>
-                    <ul>
-                        <li>Votre consentement (pour la newsletter et certains cookies)</li>
-                        <li>L'exécution d'une relation contractuelle ou précontractuelle</li>
-                        <li>Notre intérêt légitime (pour la sécurité du site et l'amélioration des services)</li>
-                        <li>Le respect d'obligations légales</li>
-                    </ul>
-                </div>
-                
-                <div class="legal-section">
-                    <h2>5. Conservation des données</h2>
-                    <p>Vos données sont conservées pour la durée nécessaire à la réalisation des finalités poursuivies, conformément aux obligations légales.</p>
-                </div>
-                
-                <div class="legal-section">
-                    <h2>6. Partage des données</h2>
-                    <p>Vos données ne sont pas vendues à des tiers. Elles peuvent être partagées avec nos prestataires techniques et les autorités compétentes si la loi l'exige.</p>
-                </div>
-                
-                <div class="legal-section">
-                    <h2>7. Vos droits</h2>
-                    <p>Conformément à la réglementation en vigueur, vous disposez des droits d'accès, de rectification, d'effacement, de limitation, de portabilité et d'opposition. Pour les exercer, contactez-nous à : <strong>privacy@datasecur-consulting.tg</strong></p>
-                </div>
-                
-                <div class="legal-section">
-                    <h2>8. Sécurité</h2>
-                    <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données.</p>
+                    <h2>4. Vos droits</h2>
+                    <p>Vous disposez d'un droit d'accès, de rectification et d'effacement de vos données. Contactez notre référent : <strong>privacy@datasecur-consulting.tg</strong>.</p>
                 </div>
                 
                 <div class="back-to-home-legal">
-                    <a href="#" class="btn btn-secondary back-to-legal-home">Retour à l'accueil</a>
+                    <a href="#" class="btn btn-primary back-to-legal-home"><i class="fas fa-arrow-left"></i> Retour à l'accueil</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Gestion des Cookies -->
+    <!-- 3. Gestion des Cookies -->
     <div class="legal-page" id="cookiePolicyPage">
         <div class="legal-hero">
             <div class="container">
+                <div class="badge-subtitle badge-white">Cookies</div>
                 <h1>Gestion des Cookies</h1>
-                <p>Informations sur les cookies utilisés sur notre site et comment les gérer.</p>
-                <a href="#" class="btn btn-white back-to-legal-home">Retour à l'accueil</a>
+                <p>Information claire sur les traceurs déposés lors de votre navigation.</p>
+                <a href="#" class="btn btn-white back-to-legal-home"><i class="fas fa-arrow-left"></i> Retour au site</a>
             </div>
         </div>
         
         <div class="container">
             <div class="legal-content">
                 <div class="legal-section">
-                    <h2>1. Qu'est-ce qu'un cookie ?</h2>
-                    <p>Un cookie est un petit fichier texte déposé sur votre terminal lors de la visite d'un site web.</p>
+                    <h2>1. Quels cookies utilisons-nous ?</h2>
+                    <p>Nous n'utilisons que des cookies strictement nécessaires au fonctionnement du site, à la mémorisation de votre choix de thème d'affichage et, si vous l'acceptez, à des statistiques anonymes de navigation.</p>
                 </div>
                 
                 <div class="legal-section">
-                    <h2>2. Les cookies que nous utilisons</h2>
-                    <h3>Cookies essentiels</h3>
-                    <p>Nécessaires au fonctionnement du site.</p>
-                    
-                    <h3>Cookies analytiques</h3>
-                    <p>Nous permettent de comprendre l'utilisation du site pour l'améliorer (Google Analytics).</p>
-                    
-                    <h3>Cookies de préférences</h3>
-                    <p>Permettent de retenir vos choix (langue, etc.).</p>
-                </div>
-                
-                <div class="legal-section">
-                    <h2>3. Gérer vos préférences</h2>
-                    <p>Vous pouvez accepter, refuser ou personnaliser vos préférences via le bandeau cookies ou en cliquant sur le lien "Gérer les cookies" ci-dessous. Vous pouvez également configurer votre navigateur pour gérer les cookies.</p>
-                    <button class="btn btn-primary" id="openCookieSettingsFromPage">Gérer mes préférences de cookies</button>
+                    <h2>2. Modifier vos préférences</h2>
+                    <p>Vous pouvez à tout moment reconfigurer vos choix :</p>
+                    <button class="btn btn-primary" id="openCookieSettingsFromPage"><i class="fas fa-gear"></i> Ouvrir le panneau des cookies</button>
                 </div>
                 
                 <div class="back-to-home-legal">
-                    <a href="#" class="btn btn-secondary back-to-legal-home">Retour à l'accueil</a>
+                    <a href="#" class="btn btn-secondary back-to-legal-home"><i class="fas fa-arrow-left"></i> Retour à l'accueil</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Crédits -->
+    <!-- 4. Crédits -->
     <div class="legal-page" id="creditsPage">
         <div class="legal-hero">
             <div class="container">
-                <h1>Crédits</h1>
-                <p>Remerciements et informations sur les ressources utilisées pour ce site.</p>
-                <a href="#" class="btn btn-white back-to-legal-home">Retour à l'accueil</a>
+                <div class="badge-subtitle badge-white">Technique</div>
+                <h1>Crédits & Conception</h1>
+                <p>Technologies mobilisées pour la réalisation de ce site.</p>
+                <a href="#" class="btn btn-white back-to-legal-home"><i class="fas fa-arrow-left"></i> Retour au site</a>
             </div>
         </div>
         
         <div class="container">
             <div class="legal-content">
                 <div class="legal-section">
-                    <h2>1. Développement</h2>
-                    <p>Ce site a été conçu et développé par l'équipe technique de Datasecur Consulting.</p>
-                </div>
-                
-                <div class="legal-section">
-                    <h2>2. Technologies utilisées</h2>
+                    <h2>Technologies</h2>
                     <ul>
-                        <li>HTML5, CSS3, JavaScript</li>
-                        <li>Font Awesome (icônes)</li>
-                        <li>Google Fonts (polices Montserrat et Open Sans)</li>
+                        <li>HTML5 & CSS3 Moderne (Standards W3C, Responsive Mobile)</li>
+                        <li>JavaScript Vanilla Léger et Sécurisé</li>
+                        <li>Icônes : Font Awesome 6 | Polices : Plus Jakarta Sans, Open Sans & JetBrains Mono</li>
                     </ul>
                 </div>
                 
-                <div class="legal-section">
-                    <h2>3. Images</h2>
-                    <p>Les images utilisées sont des photographies originales de l'équipe Datasecur Consulting.</p>
-                </div>
-                
-                <div class="legal-section">
-                    <h2>4. Conformité</h2>
-                    <p>Ce site respecte les principes de protection des données et les standards d'accessibilité web (WCAG 2.1 niveau AA).</p>
-                </div>
-                
-                <div class="legal-section">
-                    <h2>5. Droits d'auteur</h2>
-                    <p>© 2023 Datasecur Consulting. Tous droits réservés.</p>
-                </div>
-                
                 <div class="back-to-home-legal">
-                    <a href="#" class="btn btn-secondary back-to-legal-home">Retour à l'accueil</a>
+                    <a href="#" class="btn btn-primary back-to-legal-home"><i class="fas fa-arrow-left"></i> Retour à l'accueil</a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress-container">
-        <div class="scroll-progress-bar" id="progressBar"></div>
-    </div>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/22822212019" class="whatsapp-float" target="_blank" title="Contactez-nous sur WhatsApp">
+    <a href="https://wa.me/22822212019?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20concernant%20vos%20services%20en%20cybers%C3%A9curit%C3%A9%20et%20conformit%C3%A9." class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Contacter un consultant sur WhatsApp" aria-label="Contacter sur WhatsApp">
         <i class="fab fa-whatsapp"></i>
-        <span class="whatsapp-tooltip">Besoin d'aide ? Discutons !</span>
+        <span class="whatsapp-tooltip">Un conseil direct ? Écrivez-nous sur WhatsApp</span>
     </a>
 
     <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" title="Retour en haut">
+    <button id="backToTop" class="back-to-top" title="Remonter en haut de page" aria-label="Remonter en haut de page">
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    <script src="js/script.js"></script>
+    <!-- Main JavaScript Logic -->
+    <script src="js/script.js?v=2.5"></script>
 </body>
 </html>
