@@ -1,0 +1,20 @@
+/* ==========================================================================
+   DATASECUR CONSULTING - FICHIER MAÎTRE CSS (MASTER STYLESHEET)
+   Cabinet d'Expertise en Protection des Données (APDP, RGPD) & Cybersécurité
+   Lomé, Togo • Zone CEDEAO / UEMOA
+   
+   Architecture Modulaire :
+   00. Variables & Design Tokens (00-variables.css)
+   01. Reset & Styles de Base (01-reset.css)
+   02. Composants Réutilisables (02-components.css)
+   03. Sections Maîtresses (03-sections.css)
+   04. Modales, Cookies, Pages Légales & Widgets (04-modals.css)
+   05. Media Queries Responsive (05-responsive.css)
+   ========================================================================== */
+
+@import url('00-variables.css');
+@import url('01-reset.css');
+@import url('02-components.css');
+@import url('03-sections.css');
+@import url('04-modals.css');
+@import url('05-responsive.css');

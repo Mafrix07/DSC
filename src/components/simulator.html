@@ -1,0 +1,184 @@
+<!-- Auto-Évaluation Section : Diagnostic Interactif & Climax avec le Double Tampon Juris-Tech -->
+            <section class="simulator-section" id="simulator">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="badge-subtitle"><i class="fas fa-clipboard-check"></i> Outil Pratique Gratuit</div>
+                        <h2>Auto-Évaluation de Votre <span>Niveau de Conformité</span></h2>
+                        <p class="section-subtitle">4 questions ciblées basées sur les exigences de la Loi APDP n° 2019-014 et du RGPD pour faire le point sur vos priorités.</p>
+                    </div>
+
+                    <div class="quiz-container animate-on-scroll">
+                        <div class="quiz-progress-bar-wrap">
+                            <div class="quiz-progress-bar" id="quizProgressBar"></div>
+                        </div>
+                        <div class="quiz-step-indicator code-mono" id="quizStepIndicator">QUESTION 1 SUR 4</div>
+
+                        <!-- Questions du Quiz -->
+                        <div class="quiz-content" id="quizContent">
+                            <!-- Question 1 -->
+                            <div class="quiz-step active" data-step="1">
+                                <h3 class="quiz-question"><i class="fas fa-building icon-legal"></i> 1. Quelle est la nature et la taille de votre organisation ?</h3>
+                                <p class="quiz-hint">Ce critère détermine le volume des procédures à formaliser et le degré de contrôle légal.</p>
+                                <div class="quiz-options">
+                                    <button class="quiz-option" data-points="1" data-answer="TPE / Commerce / Cabinet (Moins de 10 salariés)">
+                                        <div class="option-icon"><i class="fas fa-store"></i></div>
+                                        <div class="option-content">
+                                            <strong>TPE / Commerce / Cabinet</strong>
+                                            <span>Moins de 10 collaborateurs</span>
+                                        </div>
+                                    </button>
+                                    <button class="quiz-option" data-points="2" data-answer="PME / Entreprise moyenne (10 à 100 salariés)">
+                                        <div class="option-icon"><i class="fas fa-users"></i></div>
+                                        <div class="option-content">
+                                            <strong>PME / Entreprise moyenne</strong>
+                                            <span>De 10 à 100 collaborateurs</span>
+                                        </div>
+                                    </button>
+                                    <button class="quiz-option" data-points="3" data-answer="Grande Entreprise / Institution (+100 salariés)">
+                                        <div class="option-icon"><i class="fas fa-city"></i></div>
+                                        <div class="option-content">
+                                            <strong>Grande Entreprise / Institution</strong>
+                                            <span>Plus de 100 collaborateurs</span>
+                                        </div>
+                                    </button>
+                                    <button class="quiz-option" data-points="3" data-answer="Secteur Sensible : Banque, Microfinance, Clinique, Fintech">
+                                        <div class="option-icon"><i class="fas fa-hospital-user"></i></div>
+                                        <div class="option-content">
+                                            <strong>Banque, Santé, Microfinance, Fintech</strong>
+                                            <span>Données hautement sensibles ou financières</span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Question 2 -->
+                            <div class="quiz-step" data-step="2">
+                                <h3 class="quiz-question"><i class="fas fa-database icon-legal"></i> 2. Quels types de données personnelles traitez-vous ?</h3>
+                                <p class="quiz-hint">Réf. Loi n° 2019-014 : Les données sensibles exigent des autorisations préalables et un chiffrement renforcé.</p>
+                                <div class="quiz-options">
+                                    <button class="quiz-option" data-points="3" data-answer="Données sensibles : santé, coordonnées bancaires, biométrie, pièces d'identité">
+                                        <div class="option-icon"><i class="fas fa-credit-card"></i></div>
+                                        <div class="option-content">
+                                            <strong>Données Sensibles & Financières</strong>
+                                            <span>Santé, RIB/comptes, biométrie, pièces d'identité</span>
+                                        </div>
+                                    </button>
+                                    <button class="quiz-option" data-points="2" data-answer="Fichiers clients, contacts commerciaux, numéros de téléphone et adresses">
+                                        <div class="option-icon"><i class="fas fa-address-book"></i></div>
+                                        <div class="option-content">
+                                            <strong>Fichiers Clients & Marketing</strong>
+                                            <span>Coordonnées, adresses email, WhatsApp, géolocalisation</span>
+                                        </div>
+                                    </button>
+                                    <button class="quiz-option" data-points="1" data-answer="Uniquement les dossiers administratifs du personnel et factures B2B">
+                                        <div class="option-icon"><i class="fas fa-file-invoice"></i></div>
+                                        <div class="option-content">
+                                            <strong>Données Internes Courantes</strong>
+                                            <span>Contrats de travail, bulletins de paie, facturation B2B</span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Question 3 -->
+                            <div class="quiz-step" data-step="3">
+                                <h3 class="quiz-question"><i class="fas fa-book-bookmark icon-legal"></i> 3. Avez-vous formalisé votre Registre des Traitements ou désigné un DPO ?</h3>
+                                <p class="quiz-hint">Le registre est la pièce maîtresse exigée par l'APDP en cas de contrôle ou d'audit de conformité.</p>
+                                <div class="quiz-options">
+                                    <button class="quiz-option" data-points="0" data-answer="Non, nous n'avons aucun document officiel rédigé à ce jour">
+                                        <div class="option-icon"><i class="fas fa-triangle-exclamation"></i></div>
+                                        <div class="option-content">
+                                            <strong>Pas encore initié</strong>
+                                            <span>Aucun registre formalisé ni responsable désigné</span>
+                                        </div>
+                                    </button>
+                                    <button class="quiz-option" data-points="2" data-answer="Démarche partielle : politique de confidentialité en ligne mais registre interne non finalisé">
+                                        <div class="option-icon"><i class="fas fa-file-pen"></i></div>
+                                        <div class="option-content">
+                                            <strong>Démarche partielle</strong>
+                                            <span>Mentions légales rédigées, mais registre interne incomplet</span>
+                                        </div>
+                                    </button>
+                                    <button class="quiz-option" data-points="4" data-answer="Oui, Registre à jour et Délégué aux Données déclaré">
+                                        <div class="option-icon"><i class="fas fa-clipboard-check"></i></div>
+                                        <div class="option-content">
+                                            <strong>Registre complet & Référent DPO en place</strong>
+                                            <span>Traitements inventoriés et suivis régulièrement</span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Question 4 -->
+                            <div class="quiz-step" data-step="4">
+                                <h3 class="quiz-question"><i class="fas fa-lock icon-tech"></i> 4. Quel est votre niveau de sécurité informatique sur vos données ?</h3>
+                                <p class="quiz-hint">Protection contre les rançongiciels (ransomwares), pertes accidentelles et vols d'ordinateurs.</p>
+                                <div class="quiz-options">
+                                    <button class="quiz-option" data-points="0" data-answer="Mots de passe simples, pas de sauvegarde automatique chiffrée">
+                                        <div class="option-icon"><i class="fas fa-triangle-exclamation"></i></div>
+                                        <div class="option-content">
+                                            <strong>Sécurité basique</strong>
+                                            <span>Pas de charte informatique ni de sauvegardes automatisées</span>
+                                        </div>
+                                    </button>
+                                    <button class="quiz-option" data-points="2" data-answer="Antivirus et sauvegardes régulières mais sans double authentification systématique">
+                                        <div class="option-icon"><i class="fas fa-shield"></i></div>
+                                        <div class="option-content">
+                                            <strong>Sécurité intermédiaire</strong>
+                                            <span>Antivirus et sauvegardes présents, mais failles possibles</span>
+                                        </div>
+                                    </button>
+                                    <button class="quiz-option" data-points="4" data-answer="Sauvegardes externes étanches, double authentification (2FA), accès verrouillés">
+                                        <div class="option-icon"><i class="fas fa-shield-halved"></i></div>
+                                        <div class="option-content">
+                                            <strong>Sécurité renforcée</strong>
+                                            <span>2FA obligatoire, sauvegardes étanches, droits d'accès limités</span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CLIMAX DU QUIZ : Résultat avec l'Élément Signature (Double Tampon Juris-Tech) -->
+                        <div class="quiz-result" id="quizResult" style="display: none;">
+                            <div class="result-header">
+                                <div class="result-score-circle" id="resultScoreCircle">
+                                    <span class="score-value code-mono" id="resultScoreValue">0%</span>
+                                    <span class="score-label">Niveau Estimé</span>
+                                </div>
+                                <div class="result-verdict">
+                                    <div class="juris-tech-signature-badge">
+                                        <!-- ÉLÉMENT SIGNATURE : DOUBLE TAMPON JURIS-TECH AU CLIMAX -->
+                                        <div class="seal-pill seal-legal"><i class="fas fa-scale-balanced"></i> Volet Juridique APDP</div>
+                                        <div class="seal-pill seal-tech"><i class="fas fa-lock"></i> Volet Sécurité SI</div>
+                                    </div>
+                                    <h3 id="resultTitle">Synthèse de votre situation</h3>
+                                    <p id="resultDescription">Calcul personnalisé en fonction de vos déclarations.</p>
+                                </div>
+                            </div>
+
+                            <div class="result-recommendations">
+                                <h4><i class="fas fa-list-check"></i> Actions concrètes à engager en priorité :</h4>
+                                <ul id="resultList">
+                                    <!-- Rempli dynamiquement par JS -->
+                                </ul>
+                            </div>
+
+                            <div class="result-cta-box">
+                                <div class="result-cta-text">
+                                    <strong>Vous souhaitez un diagnostic exhaustif sur pièces ?</strong>
+                                    <p>Nos consultants analysent vos contrats et vos infrastructures pour vous remettre votre feuille de route chiffrée.</p>
+                                </div>
+                                <div class="result-actions">
+                                    <button class="btn btn-primary" id="applyQuizToContact">
+                                        <i class="fas fa-paper-plane"></i> Transmettre mon diagnostic au cabinet
+                                    </button>
+                                    <button class="btn btn-secondary" id="restartQuiz">
+                                        <i class="fas fa-rotate-right"></i> Recommencer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>

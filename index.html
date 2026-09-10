@@ -16,13 +16,13 @@
     <meta property="og:url" content="https://datasecur-consulting.tg/">
     <meta property="og:title" content="Datasecur Consulting | Votre conformité, notre engagement">
     <meta property="og:description" content="Cabinet de conseil à Lomé alliant rigueur juridique (Loi APDP, RGPD) et expertise technique en cybersécurité pour les entreprises d'Afrique de l'Ouest.">
-    <meta property="og:image" content="logo.jpg">
+    <meta property="og:image" content="assets/images/logos/logo.jpg">
 
     <!-- Twitter Card -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Datasecur Consulting | Droit des Données & Cybersécurité">
     <meta property="twitter:description" content="Cabinet de conseil juridique et technique en protection des données et sécurité des SI à Lomé.">
-    <meta property="twitter:image" content="logo.jpg">
+    <meta property="twitter:image" content="assets/images/logos/logo.jpg">
 
     <!-- Données structurées Schema.org (LegalService) -->
     <script type="application/ld+json">
@@ -30,7 +30,7 @@
       "@context": "https://schema.org",
       "@type": "LegalService",
       "name": "Datasecur Consulting",
-      "image": "https://datasecur-consulting.tg/logo.jpg",
+      "image": "https://datasecur-consulting.tg/assets/images/logos/logo.jpg",
       "description": "Cabinet de conseil juridique et technique spécialisé en conformité des données personnelles (Loi APDP n° 2019-014, RGPD) et sécurité des systèmes d'information.",
       "address": {
         "@type": "PostalAddress",
@@ -65,8 +65,8 @@
         })();
     </script>
     
-    <!-- Feuille de style principale avec versioning anti-cache -->
-    <link rel="stylesheet" href="css/style.css?v=2.5">
+    <!-- Feuille de style principale modulaire avec versioning anti-cache -->
+    <link rel="stylesheet" href="assets/css/style.css?v=3.0">
 </head>
 <body>
     <!-- Page Transition Loader -->
@@ -75,12 +75,12 @@
         <div class="loader-motto">Votre conformité, notre engagement</div>
     </div>
 
-    <!-- Scroll Progress Bar -->
+<!-- Scroll Progress Bar -->
     <div class="scroll-progress-container" aria-hidden="true">
         <div class="scroll-progress-bar" id="progressBar"></div>
     </div>
 
-    <!-- Cookie Consent Banner -->
+<!-- Cookie Consent Banner -->
     <div class="cookie-consent" id="cookieConsent" role="region" aria-label="Gestion des cookies">
         <div class="cookie-content">
             <div class="cookie-text">
@@ -95,7 +95,7 @@
         </div>
     </div>
 
-    <!-- Cookie Settings Modal -->
+<!-- Cookie Settings Modal -->
     <div class="cookie-modal" id="cookieModal" role="dialog" aria-modal="true" aria-labelledby="cookieModalTitle">
         <div class="modal-content">
             <div class="modal-header">
@@ -154,7 +154,7 @@
         </div>
     </div>
 
-    <!-- Service Detail Modal -->
+<!-- Service Detail Modal -->
     <div class="modal-overlay" id="serviceModal" role="dialog" aria-modal="true" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-header">
@@ -175,13 +175,14 @@
     </div>
 
     <!-- Main Web Page -->
-    <div id="mainPage">
+
+<div id="mainPage">
         <!-- Header & Navigation -->
         <header id="header">
             <div class="container header-container">
                 <a href="#home" class="logo" aria-label="Datasecur Consulting - Accueil">
-                    <img src="data-secur/logo-datasecur-bleu.png" alt="Datasecur Consulting Logo" class="header-logo-img logo-light-mode-img">
-                    <img src="data-secur/logo-datasecur-blanc.png" alt="Datasecur Consulting Logo" class="header-logo-img logo-dark-mode-img">
+                    <img src="assets/images/logos/logo-datasecur-bleu.png" alt="Datasecur Consulting Logo" class="header-logo-img logo-light-mode-img">
+                    <img src="assets/images/logos/logo-datasecur-blanc.png" alt="Datasecur Consulting Logo" class="header-logo-img logo-dark-mode-img">
                     <div class="motto">Votre conformité, notre engagement</div>
                 </a>
                 
@@ -217,7 +218,8 @@
         </header>
 
         <main>
-            <!-- Hero Section : La Thèse du Double Sceau (Droit + SI) -->
+
+<!-- Hero Section : La Thèse du Double Sceau (Droit + SI) -->
             <section class="hero" id="home">
                 <div class="hero-bg-grid" aria-hidden="true"></div>
                 
@@ -246,7 +248,7 @@
                             </div>
 
                             <p class="hero-lead animate-on-scroll">
-                                <strong>Datasecur Consulting</strong> allie juristes experts et auditeurs en sécurité informatique. Nous accompagnons les entreprises, institutions, banques et cliniques d'Afrique de l'Ouest pour structurer leur conformité (Loi APDP, RGPD) et sécuriser sereinement leurs systèmes d'information.
+                                <strong>Datasecur Consulting</strong> est un cabinet spécialisé dans le conseil, la sensibilisation et la mise en conformité en matière de protection des données personnelles et de cybersécurité. Nous accompagnons les organisations, entreprises et institutions pour sécuriser leurs informations sensibles et garantir le respect des exigences réglementaires (Loi APDP Togo n° 2019-014, RGPD).
                             </p>
                             
                             <div class="hero-btns animate-on-scroll">
@@ -333,7 +335,7 @@
                 </div>
             </section>
 
-            <!-- Stats Section : Indicateurs Réels du Terrain -->
+<!-- Stats Section : Indicateurs Réels du Terrain -->
             <section class="stats-section" id="stats">
                 <div class="container">
                     <div class="stats-grid">
@@ -368,7 +370,7 @@
                 </div>
             </section>
 
-            <!-- Preuve d'Autorité : Leadership Institutionnel, FIPDCP & APDP Togo -->
+<!-- Preuve d'Autorité : Leadership Institutionnel, FIPDCP & APDP Togo -->
             <section class="authority-section" id="authority">
                 <div class="container">
                     <div class="authority-grid">
@@ -387,15 +389,15 @@
                         </div>
                         <div class="authority-gallery-grid animate-on-scroll">
                             <div class="gallery-item gallery-span-2">
-                                <img src="photo2.jpg" alt="Panel d'experts Datasecur et APDP Togo en conférence" loading="lazy">
+                                <img src="assets/images/photos/photo2.jpg" alt="Panel d'experts Datasecur et APDP Togo en conférence" loading="lazy">
                                 <span class="gallery-tag-overlay"><i class="fas fa-users-viewfinder"></i> Panel d'Experts APDP Togo & FIPDCP</span>
                             </div>
                             <div class="gallery-item">
-                                <img src="photo.jpg" alt="Intervention en tribune officielle FIPDCP" loading="lazy">
+                                <img src="assets/images/photos/photo.jpg" alt="Intervention en tribune officielle FIPDCP" loading="lazy">
                                 <span class="gallery-tag-overlay"><i class="fas fa-microphone"></i> Tribune Officielle</span>
                             </div>
                             <div class="gallery-item">
-                                <img src="photo3.jpg" alt="Partenaire Institutionnel APDP Togo" loading="lazy">
+                                <img src="assets/images/photos/photo3.jpg" alt="Partenaire Institutionnel APDP Togo" loading="lazy">
                                 <span class="gallery-tag-overlay"><i class="fas fa-award"></i> Partenaire Institutionnel</span>
                             </div>
                         </div>
@@ -403,7 +405,7 @@
                 </div>
             </section>
 
-            <!-- About Section : Le Cabinet & Sa Double Compétence -->
+<!-- About Section : Le Cabinet & Sa Double Compétence -->
             <section class="about" id="about">
                 <div class="container">
                     <div class="section-header">
@@ -415,7 +417,7 @@
                     <div class="about-content">
                         <div class="about-image-wrapper animate-on-scroll">
                             <div class="about-image">
-                                <img src="photo2.jpg" alt="Consultants Datasecur en session d'audit" loading="lazy">
+                                <img src="assets/images/photos/photo2.jpg" alt="Consultants Datasecur en session d'audit" loading="lazy">
                             </div>
                             <div class="experience-card">
                                 <div class="exp-badge code-mono">SIÈGE SOCIAL</div>
@@ -425,10 +427,10 @@
                         </div>
                         
                         <div class="about-text animate-on-scroll">
-                            <div class="about-tag"><i class="fas fa-handshake"></i> Notre Vision du Métier</div>
-                            <h3>Une conformité utile et opérationnelle, qui protège réellement votre entreprise sans lourdeur administrative</h3>
-                            <p>Avec l'entrée en vigueur de la <strong>Loi togolaise n° 2019-014</strong> et les prérogatives de l'<strong>APDP</strong>, la gouvernance des données est un pilier de confiance et de pérennité. Pour les dirigeants d'entreprises, de banques et d'établissements de santé, l'enjeu est double : répondre avec sérénité aux exigences réglementaires et protéger efficacement ses actifs numériques face aux cybermenaces.</p>
-                            <p>Chez <strong>Datasecur Consulting</strong>, nous privilégions la pédagogie et l'efficacité opérationnelle : pas de jargon abstrait ni de rapports inapplicables. Nous venons à votre rencontre, analysons vos réalités métier et bâtissons des solutions claires, directement exploitables par vos équipes au quotidien.</p>
+                            <div class="about-tag"><i class="fas fa-handshake"></i> Notre Mission Institutionnelle</div>
+                            <h3>Conseil, sensibilisation et mise en conformité en protection des données & cybersécurité</h3>
+                            <p><strong>Datasecur Consulting</strong> est un cabinet spécialisé dans le conseil, la sensibilisation et la mise en conformité en matière de protection des données personnelles et de cybersécurité. Notre mission consiste à accompagner les organisations, entreprises et institutions dans l'adoption de pratiques rigoureuses destinées à sécuriser leurs informations sensibles, tout en garantissant le respect strict des exigences réglementaires (Loi togolaise n° 2019-014, RGPD, directives CEDEAO).</p>
+                            <p>Alliant juristes experts et ingénieurs auditeurs en sécurité des systèmes d'information, nous privilégions la pédagogie et l'efficacité opérationnelle : pas de jargon abstrait ni de rapports inapplicables, mais des plans d'actions concrets et immédiatement exploitables par vos équipes.</p>
                             
                             <div class="about-features">
                                 <div class="feature-card">
@@ -465,7 +467,7 @@
                 </div>
             </section>
 
-            <!-- Auto-Évaluation Section : Diagnostic Interactif & Climax avec le Double Tampon Juris-Tech -->
+<!-- Auto-Évaluation Section : Diagnostic Interactif & Climax avec le Double Tampon Juris-Tech -->
             <section class="simulator-section" id="simulator">
                 <div class="container">
                     <div class="section-header">
@@ -650,7 +652,7 @@
                 </div>
             </section>
 
-            <!-- Services Section : 6 Expertises Réelles avec distinction Juridique ⚖️ vs Technique 🔒 -->
+<!-- Services Section : 6 Expertises Réelles avec distinction Juridique ⚖️ vs Technique 🔒 -->
             <section class="services" id="services">
                 <div class="container">
                     <div class="section-header">
@@ -777,7 +779,7 @@
                 </div>
             </section>
 
-            <!-- Packages Section : 3 Formules Claires & Transparentes -->
+<!-- Packages Section : 3 Formules Claires & Transparentes -->
             <section class="packages-section" id="packages">
                 <div class="container">
                     <div class="section-header">
@@ -854,7 +856,7 @@
                 </div>
             </section>
 
-            <!-- Methodology Section : 4 Étapes Séquentielles -->
+<!-- Methodology Section : 4 Étapes Séquentielles -->
             <section class="methodology-section" id="methodology">
                 <div class="container">
                     <div class="section-header">
@@ -895,7 +897,7 @@
                 </div>
             </section>
 
-            <!-- Team Section : 4 Consultants Réels & Certifiés (En veille / Masqué visuellement) -->
+<!-- Team Section : 4 Consultants Réels & Certifiés (En veille / Masqué visuellement) -->
             <section class="team-section" id="team" style="display: none;" aria-hidden="true">
                 <div class="container">
                     <div class="section-header">
@@ -908,7 +910,7 @@
                         <!-- Member 1 -->
                         <div class="team-member animate-on-scroll">
                             <div class="member-image">
-                                <img src="photo5.jpg" alt="Kodjo Mensah - Directeur Associé & Consultant DPO" loading="lazy">
+                                <img src="assets/images/photos/photo5.jpg" alt="Kodjo Mensah - Directeur Associé & Consultant DPO" loading="lazy">
                                 <div class="member-overlay">
                                     <div class="member-certs"><span class="cert-pill code-mono">DPO Certifié</span><span class="cert-pill code-mono">Spécialiste APDP</span></div>
                                 </div>
@@ -927,7 +929,7 @@
                         <!-- Member 2 -->
                         <div class="team-member animate-on-scroll">
                             <div class="member-image">
-                                <img src="photo6.jpg" alt="Agrippine Dédé d'ALMEIDA - Experte Cybersécurité & Audits SI" loading="lazy">
+                                <img src="assets/images/photos/photo6.jpg" alt="Agrippine Dédé d'ALMEIDA - Experte Cybersécurité & Audits SI" loading="lazy">
                                 <div class="member-overlay">
                                     <div class="member-certs"><span class="cert-pill code-mono">Cybersécurité</span><span class="cert-pill code-mono">FIPDCP Tech</span></div>
                                 </div>
@@ -946,7 +948,7 @@
                         <!-- Member 3 -->
                         <div class="team-member animate-on-scroll">
                             <div class="member-image">
-                                <img src="photo.jpg" alt="Gaël ELOM D'ALMEIDA - Juriste Protection des Données" loading="lazy">
+                                <img src="assets/images/photos/photo.jpg" alt="Gaël ELOM D'ALMEIDA - Juriste Protection des Données" loading="lazy">
                                 <div class="member-overlay">
                                     <div class="member-certs"><span class="cert-pill code-mono">Juriste PDCP</span><span class="cert-pill code-mono">Commissaire FIPDCP</span></div>
                                 </div>
@@ -965,7 +967,7 @@
                         <!-- Member 4 -->
                         <div class="team-member animate-on-scroll">
                             <div class="member-image">
-                                <img src="photo6.jpg" alt="Labioko Sandra Marilyne AGBODJAN - Responsable Formations & Sensibilisation" loading="lazy">
+                                <img src="assets/images/photos/photo6.jpg" alt="Labioko Sandra Marilyne AGBODJAN - Responsable Formations & Sensibilisation" loading="lazy">
                                 <div class="member-overlay">
                                     <div class="member-certs"><span class="cert-pill code-mono">Formatrice Pro</span><span class="cert-pill code-mono">Sensibilisation</span></div>
                                 </div>
@@ -984,7 +986,7 @@
                 </div>
             </section>
 
-            <!-- Testimonials Section : Cas Clients Réels -->
+<!-- Testimonials Section : Cas Clients Réels -->
             <section class="testimonials-section" id="testimonials">
                 <div class="container">
                     <div class="section-header">
@@ -1042,7 +1044,7 @@
                 </div>
             </section>
 
-            <!-- FAQ Section : Vraies Questions du Terrain avec Recherche & Filtres -->
+<!-- FAQ Section : Vraies Questions du Terrain avec Recherche & Filtres -->
             <section class="faq" id="faq">
                 <div class="container">
                     <div class="section-header">
@@ -1135,7 +1137,7 @@
                 </div>
             </section>
 
-            <!-- Contact Section : Propre, Rassurante & Directe -->
+<!-- Contact Section : Propre, Rassurante & Directe -->
             <section class="contact" id="contact">
                 <div class="container">
                     <div class="section-header">
@@ -1302,19 +1304,20 @@
             </section>
         </main>
 
-        <!-- Footer -->
+<!-- Footer -->
         <footer>
             <div class="container">
                 <div class="footer-content">
                     <div class="footer-col footer-logo">
-                        <img src="data-secur/logo-datasecur-blanc.png" alt="Datasecur Consulting Logo" class="footer-logo-img logo-light-img">
+                        <img src="assets/images/logos/logo-datasecur-blanc.png" alt="Datasecur Consulting Logo" class="footer-logo-img logo-light-img">
                         <p class="footer-motto">Votre conformité, notre engagement.</p>
                         <p>Cabinet d'expertise juridique et technique basé à Lomé, dédié à la protection des données personnelles (Loi APDP n° 2019-014, RGPD) et à la sécurisation des systèmes d'information.</p>
                         
                         <div class="social-links">
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://linkedin.com/company/datasecurconsulting" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://twitter.com/datasecurconsulting" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                            <a href="https://facebook.com/datasecurconsulting" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://instagram.com/datasecurconsulting" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                             <a href="https://wa.me/22822212019?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20concernant%20vos%20services%20en%20cybers%C3%A9curit%C3%A9%20et%20conformit%C3%A9." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
@@ -1376,7 +1379,8 @@
     </div>
 
     <!-- Legal Pages Sub-Views -->
-    <!-- 1. Mentions Légales -->
+
+<!-- 1. Mentions Légales -->
     <div class="legal-page" id="mentionsLegalesPage">
         <div class="legal-hero">
             <div class="container">
@@ -1416,7 +1420,7 @@
         </div>
     </div>
 
-    <!-- 2. Politique de Confidentialité -->
+<!-- 2. Politique de Confidentialité -->
     <div class="legal-page" id="privacyPolicyPage">
         <div class="legal-hero">
             <div class="container">
@@ -1456,7 +1460,7 @@
         </div>
     </div>
 
-    <!-- 3. Gestion des Cookies -->
+<!-- 3. Gestion des Cookies -->
     <div class="legal-page" id="cookiePolicyPage">
         <div class="legal-hero">
             <div class="container">
@@ -1487,7 +1491,7 @@
         </div>
     </div>
 
-    <!-- 4. Crédits -->
+<!-- 4. Crédits -->
     <div class="legal-page" id="creditsPage">
         <div class="legal-hero">
             <div class="container">
@@ -1516,7 +1520,7 @@
         </div>
     </div>
 
-    <!-- WhatsApp Floating Button -->
+<!-- WhatsApp Floating Button -->
     <a href="https://wa.me/22822212019?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20concernant%20vos%20services%20en%20cybers%C3%A9curit%C3%A9%20et%20conformit%C3%A9." class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Contacter un consultant sur WhatsApp" aria-label="Contacter sur WhatsApp">
         <i class="fab fa-whatsapp"></i>
         <span class="whatsapp-tooltip">Un conseil direct ? Écrivez-nous sur WhatsApp</span>
@@ -1527,7 +1531,8 @@
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    <!-- Main JavaScript Logic -->
-    <script src="js/script.js?v=2.5"></script>
+    <!-- Main JavaScript Orchestrator (ES Module) -->
+    <script type="module" src="assets/js/script.js?v=3.0"></script>
 </body>
 </html>
+

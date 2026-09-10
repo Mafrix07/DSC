@@ -1,0 +1,20 @@
+{
+  "name": "datasecur-consulting",
+  "version": "3.0.0",
+  "description": "Cabinet d'Expertise en Protection des Données & Cybersécurité à Lomé",
+  "scripts": {
+    "build": "node build.js",
+    "watch": "node build.js --watch",
+    "dev": "node build.js --watch"
+  },
+  "keywords": [
+    "apdp",
+    "rgpd",
+    "cybersecurite",
+    "dpo",
+    "togo",
+    "lome"
+  ],
+  "author": "Datasecur Consulting",
+  "license": "ISC"
+}

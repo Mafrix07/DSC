@@ -1,0 +1,117 @@
+/* ==========================================================================
+   DATASECUR CONSULTING - 02. COMPOSANTS RÉUTILISABLES & BOUTONS
+   Cabinet d'Expertise en Protection des Données (APDP, RGPD) & Cybersécurité
+   Lomé, Togo • Zone CEDEAO / UEMOA
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   4. BOUTONS & ÉLÉMENTS D'ACTION
+   -------------------------------------------------------------------------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 26px;
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 1px solid transparent;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.btn-sm {
+    padding: 8px 18px;
+    font-size: 0.86rem;
+    border-radius: var(--radius-sm);
+}
+
+.btn-lg {
+    padding: 15px 30px;
+    font-size: 1.02rem;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: var(--color-brand-blue);
+    color: #FFFFFF;
+    border-color: var(--color-brand-blue);
+    box-shadow: 0 4px 14px rgba(30, 58, 138, 0.25);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-brand-hover);
+    border-color: var(--color-brand-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(30, 58, 138, 0.35);
+    color: #FFFFFF;
+}
+
+.btn-secondary {
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    border-color: var(--border-medium);
+}
+
+.btn-secondary:hover {
+    background-color: var(--bg-surface-warm);
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+}
+
+.btn-outline-hero {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    backdrop-filter: blur(10px);
+}
+
+.btn-outline-hero:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    border-color: #FFFFFF;
+    transform: translateY(-2px);
+    color: #FFFFFF;
+}
+
+.btn-white {
+    background: #FFFFFF;
+    color: #070D1E;
+    border-color: #FFFFFF;
+    font-weight: 700;
+}
+
+.btn-white:hover {
+    background: #F1F5F9;
+    transform: translateY(-2px);
+}
+
+.btn-text-link {
+    background: none;
+    border: none;
+    color: var(--color-brand-blue);
+    font-weight: 700;
+    font-size: 0.92rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 0;
+    transition: var(--transition);
+}
+
+html[data-theme="dark"] .btn-text-link {
+    color: #60A5FA;
+}
+
+.btn-text-link:hover {
+    gap: 12px;
+    color: var(--color-brand-accent);
+}
+

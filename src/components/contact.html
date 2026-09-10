@@ -1,0 +1,166 @@
+<!-- Contact Section : Propre, Rassurante & Directe -->
+            <section class="contact" id="contact">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="badge-subtitle badge-white">Échanger Directement</div>
+                        <h2>Contactez <span>Nos Consultants</span></h2>
+                        <p class="section-subtitle section-subtitle-light">Vous avez une question sur vos obligations ou souhaitez un devis pour votre entreprise ? Notre équipe étudie votre demande et vous apporte une réponse claire.</p>
+                    </div>
+                    
+                    <div class="contact-content">
+                        <div class="contact-info animate-on-scroll">
+                            <h3>Discutons de votre situation</h3>
+                            <p>Venez nous rencontrer à nos bureaux de Lomé ou convenons d'un échange téléphonique / visioconférence sans aucun engagement.</p>
+                            
+                            <div class="contact-details">
+                                <div class="contact-detail">
+                                    <div class="detail-icon"><i class="fas fa-location-dot"></i></div>
+                                    <div>
+                                        <h4>Bureaux & Adresse</h4>
+                                        <p>Rue du Commerce, Immeuble Datasecur, Lomé, Togo</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-detail">
+                                    <div class="detail-icon"><i class="fas fa-phone"></i></div>
+                                    <div>
+                                        <h4>Téléphone Fixe</h4>
+                                        <p><a href="tel:+22822212019">+228 22 21 20 19</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-detail">
+                                    <div class="detail-icon"><i class="fab fa-whatsapp"></i></div>
+                                    <div>
+                                        <h4>WhatsApp Professionnel</h4>
+                                        <p><a href="https://wa.me/22822212019?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20concernant%20vos%20services%20en%20cybers%C3%A9curit%C3%A9%20et%20conformit%C3%A9." target="_blank" rel="noopener noreferrer">+228 22 21 20 19</a></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-detail">
+                                    <div class="detail-icon"><i class="fas fa-envelope"></i></div>
+                                    <div>
+                                        <h4>Courrier Électronique</h4>
+                                        <p><a href="mailto:contact@datasecur-consulting.tg">contact@datasecur-consulting.tg</a></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-detail">
+                                    <div class="detail-icon"><i class="fas fa-clock"></i></div>
+                                    <div>
+                                        <h4>Horaires d'Accueil</h4>
+                                        <p>Lundi - Vendredi : 08h00 - 18h00<br>Samedi : 09h00 - 13h00</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="emergency-contact-box">
+                                <i class="fas fa-shield-virus icon-alert"></i>
+                                <div>
+                                    <strong>Urgence Violation ou Piratage de Données ?</strong>
+                                    <span>Assistance réactive pour la notification légale sous 72h.</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form-wrapper animate-on-scroll">
+                            <form id="contactForm" class="contact-form" novalidate>
+                                <!-- Encart Diagnostic Joint (Actif après auto-évaluation) -->
+                                <div id="diagnosticSummaryBadge" class="diagnostic-summary-attached" style="display: none;">
+                                    <div class="summary-badge-left">
+                                        <span class="summary-badge-score code-mono" id="attachedScoreVal">0%</span>
+                                        <div class="summary-badge-info">
+                                            <strong id="attachedVerdictTitle">Diagnostic de Conformité Joint</strong>
+                                            <span id="attachedVerdictDesc">Votre auto-évaluation sera transmise au consultant dédié.</span>
+                                        </div>
+                                    </div>
+                                    <button type="button" id="removeAttachedDiagnostic" class="btn-remove-badge" title="Retirer le diagnostic">&times;</button>
+                                </div>
+
+                                <div class="form-header-msg">
+                                    <i class="fas fa-user-shield icon-legal"></i> Échanges confidentiels sous secret professionnel • Examen attentif par notre équipe à Lomé
+                                </div>
+                                
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="name">Votre Nom & Prénom <span class="required-star">*</span></label>
+                                        <div class="input-container">
+                                            <input type="text" id="name" name="name" required placeholder="Ex: Jean Koffi">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <span class="field-error" id="nameError"></span>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="email">Adresse Email Professionnelle <span class="required-star">*</span></label>
+                                        <div class="input-container">
+                                            <input type="email" id="email" name="email" required placeholder="nom@entreprise.tg">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <span class="field-error" id="emailError"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="phone">Numéro Téléphone / WhatsApp</label>
+                                        <div class="input-container">
+                                            <input type="tel" id="phone" name="phone" placeholder="+228 90 00 00 00">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="company">Entreprise ou Structure</label>
+                                        <div class="input-container">
+                                            <input type="text" id="company" name="company" placeholder="Nom de votre organisation">
+                                            <i class="fas fa-building"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="service">Objet de votre demande</label>
+                                    <div class="input-container">
+                                        <select id="service" name="service">
+                                            <option value="">Sélectionnez l'objet...</option>
+                                            <option value="audit">Audit & Cartographie des Données</option>
+                                            <option value="dpo">DPO Externalisé / Délégué aux données</option>
+                                            <option value="security">Sécurisation des SI & Charte Informatique</option>
+                                            <option value="training">Formation & Prévention Anti-Phishing</option>
+                                            <option value="certification">Accompagnement Certification ISO 27001</option>
+                                            <option value="incident">Urgence : Fuite de données / Cyberattaque</option>
+                                            <option value="pack-express">Pack Diagnostic Initial</option>
+                                            <option value="pack-dpo">Pack DPO Externe & Suivi</option>
+                                            <option value="pack-360">Pack Sécurité Globale & SI</option>
+                                            <option value="other">Autre demande de renseignement</option>
+                                        </select>
+                                        <i class="fas fa-layer-group"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Votre Message ou Contexte <span class="required-star">*</span></label>
+                                    <div class="input-container">
+                                        <textarea id="message" name="message" required placeholder="Expliquez brièvement votre besoin (secteur d'activité, objectifs de mise en conformité, questions particulières)..."></textarea>
+                                        <i class="fas fa-comment-dots textarea-icon"></i>
+                                    </div>
+                                    <span class="field-error" id="messageError"></span>
+                                </div>
+
+                                <div class="form-consent">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="contactConsent" required checked>
+                                        <span>J'accepte que mes coordonnées soient utilisées par Datasecur Consulting pour me recontacter au sujet de ma demande.</span>
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-block" id="submitContactBtn">
+                                    <span><i class="fas fa-paper-plane"></i> Envoyer ma demande</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
